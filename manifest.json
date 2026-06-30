@@ -1,0 +1,65 @@
+{
+  "name": "حراج ابو خالد - شراء الأثاث المستعمل والسكراب",
+  "short_name": "حراج ابو خالد",
+  "description": "نشتري ونبيع الأثاث المستعمل والسكراب بأفضل الأسعار في جدة، مكة، رابغ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#16a34a",
+  "theme_color": "#16a34a",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "ar",
+  "dir": "rtl",
+  "categories": ["business", "shopping", "classifieds"],
+  "icons": [
+    {
+      "src": "images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "اتصل بنا",
+      "short_name": "اتصال",
+      "description": "اتصل بنا مباشرة",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "images/logo.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "خدماتنا",
+      "short_name": "خدمات",
+      "description": "عرض جميع خدماتنا",
+      "url": "/#services",
+      "icons": [
+        {
+          "src": "images/logo.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/01.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "حراج ابو خالد - الصفحة الرئيسية"
+    }
+  ]
+}
