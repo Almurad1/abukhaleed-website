@@ -52,14 +52,5 @@
         }
       ]
     }
-  ],
-  "screenshots": [
-    {
-      "src": "images/01.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "platform": "wide",
-      "label": "حراج ابو خالد - الصفحة الرئيسية"
-    }
   ]
 }
