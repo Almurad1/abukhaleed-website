@@ -1,0 +1,60 @@
+# Robots.txt لموقع حراج ابو خالد
+# تم التحديث: 2026-06-30
+# الموقع: https://abu-khalid.netlify.app/
+
+# ===== الإعدادات العامة =====
+User-agent: *
+Allow: /
+Disallow: /images/
+Disallow: /css/
+Disallow: /js/
+Disallow: /fonts/
+
+# ===== خريطة الموقع =====
+Sitemap: https://abu-khalid.netlify.app/sitemap.xml
+
+# ===== إعدادات Google =====
+User-agent: Googlebot
+Allow: /
+Allow: /images/
+Allow: /css/
+Crawl-delay: 2
+
+# ===== إعدادات Bing =====
+User-agent: Bingbot
+Allow: /
+Allow: /images/
+Crawl-delay: 5
+
+# ===== إعدادات Twitter/X =====
+User-agent: Twitterbot
+Allow: /
+
+# ===== إعدادات Yandex =====
+User-agent: Yandex
+Allow: /
+Allow: /images/
+Crawl-delay: 3
+
+# ===== إعدادات Baidu =====
+User-agent: Baiduspider
+Disallow: /
+Crawl-delay: 10
+
+# ===== إعدادات DuckDuckGo =====
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 5
+
+# ===== الروبوتات الممنوعة =====
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# ===== وقت إعادة الزيارة =====
+# Crawl-delay: 5 (مطبق على جميع الروبوتات)
