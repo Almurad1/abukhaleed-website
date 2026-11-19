@@ -1,52 +1,103 @@
-# Robots.txt لموقع حراج ابو خالد
-# تم التحديث: 2026-06-30
-# الموقع: https://abu-khalid.netlify.app/
 
-# ===== الإعدادات العامة =====
-User-agent: *
-Allow: /
-Disallow: /images/
-Disallow: /css/
-Disallow: /js/
-Disallow: /fonts/
+# =========================================================
+# Robots.txt - Abu Khalid Website
+# Website: https://abu-khalid.netlify.app/
+# Last Updated: 2026-11-19
+# =========================================================
 
-# ===== خريطة الموقع =====
+# Sitemap
 Sitemap: https://abu-khalid.netlify.app/sitemap.xml
 
-# ===== إعدادات Google =====
-User-agent: Googlebot
+
+# =========================================================
+# GENERAL SEARCH ENGINE RULES
+# =========================================================
+
+User-agent: *
 Allow: /
+
+# Allow important website resources
 Allow: /images/
 Allow: /css/
-Crawl-delay: 2
+Allow: /js/
+Allow: /fonts/
 
-# ===== إعدادات Bing =====
+
+# =========================================================
+# GOOGLE
+# =========================================================
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+
+# =========================================================
+# BING
+# =========================================================
+
 User-agent: Bingbot
 Allow: /
-Allow: /images/
-Crawl-delay: 5
 
-# ===== إعدادات Twitter/X =====
+
+# =========================================================
+# SOCIAL MEDIA CRAWLERS
+# =========================================================
+
 User-agent: Twitterbot
 Allow: /
 
-# ===== إعدادات Yandex =====
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+
+# =========================================================
+# YANDEX
+# =========================================================
+
 User-agent: Yandex
 Allow: /
-Allow: /images/
-Crawl-delay: 3
 
-# ===== إعدادات Baidu =====
-User-agent: Baiduspider
-Disallow: /
-Crawl-delay: 10
 
-# ===== إعدادات DuckDuckGo =====
+# =========================================================
+# DUCKDUCKGO
+# =========================================================
+
 User-agent: DuckDuckBot
 Allow: /
-Crawl-delay: 5
 
-# ===== الروبوتات الممنوعة =====
+
+# =========================================================
+# CHATGPT SEARCH
+# Allow website discovery in ChatGPT Search
+# =========================================================
+
+User-agent: OAI-SearchBot
+Allow: /
+
+
+# =========================================================
+# AI TRAINING CRAWLERS
+# =========================================================
+
+# OpenAI training crawler
+User-agent: GPTBot
+Disallow: /
+
+# Common Crawl
+User-agent: CCBot
+Disallow: /
+
+
+# =========================================================
+# UNWANTED SEO CRAWLERS
+# =========================================================
+
 User-agent: SemrushBot
 Disallow: /
 
@@ -56,5 +107,21 @@ Disallow: /
 User-agent: MJ12bot
 Disallow: /
 
-# ===== وقت إعادة الزيارة =====
-# Crawl-delay: 5 (مطبق على جميع الروبوتات)
+User-agent: DotBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+
+# =========================================================
+# OPTIONAL: BAIDU
+# =========================================================
+
+User-agent: Baiduspider
+Disallow: /
+
+
+# =========================================================
+# END OF ROBOTS.TXT
+# =========================================================
