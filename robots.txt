@@ -1,12 +1,8 @@
-
 # =========================================================
 # Robots.txt - Abu Khalid Website
 # Website: https://abu-khalid.netlify.app/
 # Last Updated: 2026-11-19
 # =========================================================
-
-# Sitemap
-Sitemap: https://abu-khalid.netlify.app/sitemap.xml
 
 
 # =========================================================
@@ -14,6 +10,8 @@ Sitemap: https://abu-khalid.netlify.app/sitemap.xml
 # =========================================================
 
 User-agent: *
+
+# Allow search engines to crawl the website
 Allow: /
 
 # Allow important website resources
@@ -21,6 +19,9 @@ Allow: /images/
 Allow: /css/
 Allow: /js/
 Allow: /fonts/
+
+# Sitemap location
+Sitemap: https://abu-khalid.netlify.app/sitemap.xml
 
 
 # =========================================================
@@ -73,29 +74,7 @@ Allow: /
 
 
 # =========================================================
-# CHATGPT SEARCH
-# Allow website discovery in ChatGPT Search
-# =========================================================
-
-User-agent: OAI-SearchBot
-Allow: /
-
-
-# =========================================================
-# AI TRAINING CRAWLERS
-# =========================================================
-
-# OpenAI training crawler
-User-agent: GPTBot
-Disallow: /
-
-# Common Crawl
-User-agent: CCBot
-Disallow: /
-
-
-# =========================================================
-# UNWANTED SEO CRAWLERS
+# BLOCK UNWANTED SEO CRAWLERS
 # =========================================================
 
 User-agent: SemrushBot
@@ -115,10 +94,30 @@ Disallow: /
 
 
 # =========================================================
-# OPTIONAL: BAIDU
+# BLOCK BAIDU (OPTIONAL)
 # =========================================================
 
 User-agent: Baiduspider
+Disallow: /
+
+
+# =========================================================
+# BLOCK AI CRAWLERS (OPTIONAL)
+# =========================================================
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
 Disallow: /
 
 
