@@ -1,53 +1,151 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-language="ar">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#16a34a">
 
     <!-- SEO -->
-    <title>شراء مكيفات مستعملة وسكراب جدة | أبو خالد</title>
+    <title id="pageTitle">أبو خالد | شراء وبيع المكيفات والسكراب والألمنيوم والأثاث المستعمل جدة</title>
 
-    <meta name="description" content="أبو خالد لشراء المكيفات المستعملة والخربانة ومكيفات السكراب والكمبروسرات والنحاس والألمنيوم والحديد والأجهزة الكهربائية والمطابخ والأثاث المستعمل في جدة ومكة ورابغ. تواصل معنا عبر الاتصال أو واتساب.">
+    <meta
+        id="pageDescription"
+        name="description"
+        content="أبو خالد لشراء وبيع المكيفات المستعملة والخربانة والسكراب والنحاس والألمنيوم والحديد والكيابل والمطابخ والأثاث المستعمل في جميع أحياء جدة، ومكة المكرمة ورابغ."
+    >
 
-    <meta name="keywords" content="أبو خالد, شراء مكيفات مستعملة جدة, شراء مكيفات خربانة جدة, شراء مكيفات سكراب, سكراب مكيفات جدة, شراء كمبروسر مكيف, شراء نحاس جدة, شراء ألمنيوم, شراء سكراب جدة, شراء حديد, شراء أجهزة كهربائية مستعملة, شراء معدات مطاعم, شراء مطابخ مستعملة, شراء أثاث مستعمل, مكة, رابغ">
-
-    <meta name="author" content="أبو خالد">
     <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="theme-color" content="#16a34a">
+    <meta name="author" content="أبو خالد">
+    <meta name="language" content="Arabic">
 
     <link rel="canonical" href="https://abu-khalid.netlify.app/">
 
-    <!-- Website Icons -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="apple-touch-icon" href="images/logo.png">
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="ar" href="https://abu-khalid.netlify.app/">
+    <link rel="alternate" hreflang="en" href="https://abu-khalid.netlify.app/?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://abu-khalid.netlify.app/">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="شراء مكيفات مستعملة وسكراب جدة | أبو خالد">
-    <meta property="og:description" content="أبو خالد لشراء المكيفات المستعملة والخربانة ومكيفات السكراب والنحاس والألمنيوم والحديد في جدة ومكة ورابغ.">
-    <meta property="og:url" content="https://abu-khalid.netlify.app/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://abu-khalid.netlify.app/images/logo.png">
-    <meta property="og:locale" content="ar_SA">
+    <meta property="og:locale" content="ar_SA" id="ogLocale">
     <meta property="og:site_name" content="أبو خالد">
+
+    <meta
+        property="og:title"
+        content="أبو خالد | شراء وبيع مكيفات وسكراب وأثاث مستعمل"
+        id="ogTitle"
+    >
+
+    <meta
+        property="og:description"
+        content="شراء وبيع المكيفات المستعملة والسكراب والألمنيوم والنحاس والحديد والمطابخ والأثاث المستعمل في جميع أحياء جدة ومكة المكرمة ورابغ."
+        id="ogDescription"
+    >
+
+    <meta property="og:url" content="https://abu-khalid.netlify.app/">
+    <meta property="og:image" content="https://abu-khalid.netlify.app/images/site-billboard-very-close.png" id="ogImage">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="أبو خالد - شراء وبيع المكيفات والسكراب والأثاث المستعمل">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="شراء مكيفات مستعملة وسكراب | أبو خالد">
-    <meta name="twitter:description" content="شراء مكيفات مستعملة وخربانة وسكراب ونحاس وألمنيوم وحديد في جدة ومكة ورابغ.">
-    <meta name="twitter:image" content="https://abu-khalid.netlify.app/images/logo.png">
 
-    <!-- Local Business Structured Data -->
-    <script type="application/ld+json">
+    <meta
+        name="twitter:title"
+        content="أبو خالد | شراء وبيع مكيفات وسكراب وأثاث مستعمل"
+        id="twitterTitle"
+    >
+
+    <meta
+        name="twitter:description"
+        content="شراء وبيع المكيفات والسكراب والألمنيوم والنحاس والحديد والمطابخ والأثاث المستعمل في جدة ومكة ورابغ."
+        id="twitterDescription"
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://abu-khalid.netlify.app/images/site-billboard-very-close.png"
+        id="twitterImage"
+    >
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo-192.png">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="أبو خالد">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome (محسّن) -->
+    <link
+        rel="preload"
+        as="style"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        media="print"
+        onload="this.media='all'"
+        referrerpolicy="no-referrer"
+    >
+    <noscript>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            referrerpolicy="no-referrer"
+        >
+    </noscript>
+
+    <!-- preload صورة الهيرو -->
+    <link rel="preload" as="image" href="images/site-billboard-very-close.png" fetchpriority="high">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- LocalBusiness + OfferCatalog Schema -->
+    <script type="application/ld+json" id="businessSchema">
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "أبو خالد",
         "alternateName": "Abu Khalid",
         "url": "https://abu-khalid.netlify.app/",
-        "image": "https://abu-khalid.netlify.app/images/logo.png",
-        "description": "أبو خالد متخصص في شراء المكيفات المستعملة والخربانة ومكيفات السكراب والكمبروسرات والنحاس والألمنيوم والحديد والأجهزة الكهربائية ومعدات المطاعم والمطابخ والأثاث المستعمل في جدة ومكة ورابغ.",
+        "image": [
+            "https://abu-khalid.netlify.app/images/logo.png",
+            "https://abu-khalid.netlify.app/images/site-billboard-very-close.png"
+        ],
+        "description": "أبو خالد لشراء وبيع المكيفات المستعملة والخربانة والسكراب والنحاس والألمنيوم والحديد والكيابل والمطابخ والأثاث المستعمل في جميع أحياء جدة ومكة المكرمة ورابغ.",
+        "priceRange": "$$",
+
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Jeddah",
+            "addressRegion": "Makkah Region",
+            "addressCountry": "SA"
+        },
+
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 21.4858,
+            "longitude": 39.1925
+        },
+
         "telephone": [
             "+966508777407",
             "+966540925179",
@@ -55,28 +153,52 @@
             "+966566651804",
             "+966538982229"
         ],
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "السروات",
-            "addressLocality": "جدة",
-            "postalCode": "22348",
-            "addressCountry": "SA"
-        },
+
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "07:00",
+            "closes": "23:59"
+        }],
+
         "areaServed": [
             {
                 "@type": "City",
-                "name": "جدة"
+                "name": "Jeddah",
+                "containedInPlace": {
+                    "@type": "Country",
+                    "name": "Saudi Arabia"
+                }
             },
             {
                 "@type": "City",
-                "name": "مكة"
+                "name": "Makkah",
+                "containedInPlace": {
+                    "@type": "Country",
+                    "name": "Saudi Arabia"
+                }
             },
             {
                 "@type": "City",
-                "name": "رابغ"
+                "name": "Rabigh",
+                "containedInPlace": {
+                    "@type": "Country",
+                    "name": "Saudi Arabia"
+                }
             }
         ],
-        "openingHours": "Mo-Su 07:00-24:00",
+
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "خدمات الشراء والبيع",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "شراء وبيع مكيفات مستعملة"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "شراء وبيع سكراب ومعادن"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "شراء وبيع أثاث مستعمل"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "شراء وبيع معدات مطاعم"}}
+            ]
+        },
+
         "sameAs": [
             "https://www.facebook.com/khald.alrajhy.693594",
             "https://www.facebook.com/profile.php?id=100075697549136",
@@ -85,121 +207,131 @@
     }
     </script>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json" id="faqSchema">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ما أنواع المكيفات التي يتم شراؤها؟",
+          "acceptedAnswer": {"@type": "Answer", "text": "يتم استقبال طلبات شراء المكيفات المستعملة والخربانة وسكراب المكيفات والكمبروسرات."}
+        },
+        {
+          "@type": "Question",
+          "name": "هل يتم شراء المكيفات الخربانة؟",
+          "acceptedAnswer": {"@type": "Answer", "text": "نعم، يمكنك إرسال صور المكيف وتفاصيل حالته لمراجعة طلبك."}
+        },
+        {
+          "@type": "Question",
+          "name": "هل يتم شراء النحاس والألمنيوم؟",
+          "acceptedAnswer": {"@type": "Answer", "text": "نعم، يمكنك إرسال تفاصيل النحاس والألمنيوم والكميات المتوفرة لديك."}
+        },
+        {
+          "@type": "Question",
+          "name": "ما المدن التي تشملها الخدمة؟",
+          "acceptedAnswer": {"@type": "Answer", "text": "تشمل الخدمة جميع أحياء جدة، بالإضافة إلى مكة المكرمة ورابغ."}
+        },
+        {
+          "@type": "Question",
+          "name": "كيف يتم تحديد السعر؟",
+          "acceptedAnswer": {"@type": "Answer", "text": "يعتمد التقييم على نوع الأغراض وحالتها وكميتها والتفاصيل المرسلة."}
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+    <div id="progressBar" class="progress-bar"></div>
 
+    <!-- ================= HEADER ================= -->
     <header class="header" id="header">
 
-        <div class="container">
+        <div class="container header-container">
 
-            <div class="nav-wrapper">
+            <a href="#home" class="logo" aria-label="أبو خالد - الصفحة الرئيسية">
 
-                <div class="logo">
+                <img
+                    src="images/logo.png"
+                    alt="شعار أبو خالد"
+                    data-ar-alt="شعار أبو خالد"
+                    data-en-alt="Abu Khalid logo"
+                    width="55"
+                    height="55"
+                >
 
-                    <a href="#home" aria-label="الصفحة الرئيسية">
+                <span class="logo-text">
+                    <strong>أبو خالد</strong>
+                    <small data-i18n="header.subtitle">
+                        شراء المستعمل والسكراب
+                    </small>
+                </span>
 
-                        <img
-                            src="images/logo.png"
-                            alt="شعار أبو خالد"
-                            class="logo-img"
-                        >
+            </a>
 
-                    </a>
+            <nav
+                class="nav"
+                id="nav"
+                aria-label="القائمة الرئيسية"
+                data-i18n-aria-label="header.navigation"
+            >
+                <a href="#home" class="nav-link active" data-i18n="nav.home">الرئيسية</a>
+                <a href="#services" class="nav-link" data-i18n="nav.services">خدماتنا</a>
+                <a href="#how-it-works" class="nav-link" data-i18n="nav.process">طريقة العمل</a>
+                <a href="#pricing" class="nav-link" data-i18n="nav.pricing">تقييم المشتريات</a>
+                <a href="#about" class="nav-link" data-i18n="nav.about">من نحن</a>
+                <a href="#faq" class="nav-link" data-i18n="nav.faq">الأسئلة الشائعة</a>
+                <a href="#contact" class="nav-link" data-i18n="nav.contact">تواصل معنا</a>
+            </nav>
 
-                    <div class="logo-text">
-                        <h2>أبو خالد</h2>
-                        <p>Abu Khalid Scrap</p>
-                    </div>
+            <div class="header-actions">
 
-                </div>
+                <a
+                    href="tel:+966508777407"
+                    class="header-phone"
+                    aria-label="اتصل بأبو خالد"
+                    data-i18n-aria-label="header.callLabel"
+                >
+                    <i class="fas fa-phone"></i>
+                    <span>اتصل بنا</span>
+                </a>
 
-                <nav class="nav" id="nav">
+                <button
+                    type="button"
+                    class="icon-button"
+                    id="themeToggle"
+                    aria-label="تغيير المظهر"
+                    aria-pressed="false"
+                    data-i18n-aria-label="header.themeLabel"
+                    title="تغيير المظهر"
+                    data-i18n-title="header.themeLabel"
+                >
+                    <i class="fas fa-moon"></i>
+                </button>
 
-                    <ul class="nav-list">
+                <button
+                    type="button"
+                    class="language-button"
+                    id="langToggle"
+                    aria-label="Change language to English"
+                >
+                    EN
+                </button>
 
-                        <li>
-                            <a href="#home" class="nav-link" data-ar="الرئيسية" data-en="Home">
-                                الرئيسية
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#services" class="nav-link" data-ar="خدماتنا" data-en="Services">
-                                خدماتنا
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#about" class="nav-link" data-ar="من نحن" data-en="About">
-                                من نحن
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#contact" class="nav-link" data-ar="اتصل بنا" data-en="Contact">
-                                اتصل بنا
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </nav>
-
-                <div class="controls">
-
-                    <a href="tel:+966508777407" class="phone-btn">
-
-                        <i class="fas fa-phone"></i>
-                        <span>0508777407</span>
-
-                    </a>
-
-                    <button
-                        class="theme-toggle"
-                        id="themeToggle"
-                        type="button"
-                        aria-label="تغيير المظهر"
-                    >
-                        <i class="fas fa-moon"></i>
-                    </button>
-
-                    <button
-                        class="lang-toggle"
-                        id="langToggle"
-                        type="button"
-                        aria-label="تغيير اللغة"
-                    >
-                        <i class="fas fa-globe"></i>
-                        <span>EN</span>
-                    </button>
-
-                    <button
-                        class="mobile-toggle"
-                        id="mobileToggle"
-                        type="button"
-                        aria-label="فتح القائمة"
-                        aria-expanded="false"
-                    >
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-
-                </div>
+                <button
+                    type="button"
+                    class="mobile-toggle"
+                    id="mobileToggle"
+                    aria-label="فتح القائمة"
+                    aria-controls="nav"
+                    aria-expanded="false"
+                    data-i18n-aria-label="header.menuLabel"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
 
             </div>
 
@@ -208,43 +340,38 @@
     </header>
 
 
-    <!-- ================= HERO ================= -->
+    <main>
 
-    <section id="home" class="hero">
+        <!-- ================= HERO ================= -->
+        <section class="hero section" id="home">
 
-        <div class="container">
+            <div class="container hero-container">
 
-            <div class="hero-content">
-
-                <div class="hero-text">
+                <div class="hero-content">
 
                     <span class="hero-badge">
-                        نشتري المكيفات المستعملة والخربانة والسكراب
+                        <i class="fas fa-check-circle"></i>
+                        <span data-i18n="hero.badge">خدمات شراء وبيع المستعمل والسكراب</span>
                     </span>
 
-                    <h1 class="hero-title">
-                        شراء مكيفات مستعملة وسكراب في جدة ومكة ورابغ
+                    <h1 data-i18n="hero.title">
+                        شراء وبيع المكيفات والسكراب والألمنيوم والأثاث المستعمل
                     </h1>
 
-                    <p class="hero-description">
-
-                        أبو خالد متخصص في شراء المكيفات المستعملة
-                        والمكيفات الخربانة التي لا تعمل ومكيفات السكراب
-                        والكمبروسرات ونحاس المكيفات.
-
-                        نشتري مختلف أنواع المكيفات بأسعار مناسبة،
-                        ويمكنك إرسال صور المكيف عبر واتساب للتواصل
-                        والاستفسار عن عملية الشراء.
-
+                    <p data-i18n="hero.description">
+                        أبو خالد لشراء وبيع المكيفات المستعملة والخربانة والسكراب والنحاس والألمنيوم والحديد والكيابل والمطابخ والأثاث المستعمل في جميع أحياء جدة ومكة المكرمة ورابغ.
                     </p>
 
-                    <div class="hero-actions">
+                    <div class="hero-buttons">
 
-                        <a href="tel:+966508777407" class="btn btn-primary">
-
+                        <a
+                            href="tel:+966508777407"
+                            class="btn btn-primary"
+                            aria-label="اتصل الآن"
+                            data-i18n-aria-label="hero.callLabel"
+                        >
                             <i class="fas fa-phone"></i>
-                            <span>اتصل لبيع مكيفك</span>
-
+                            <span data-i18n="hero.call">اتصل الآن</span>
                         </a>
 
                         <a
@@ -252,1145 +379,990 @@
                             class="btn btn-whatsapp"
                             target="_blank"
                             rel="noopener noreferrer"
+                            data-whatsapp-link
                         >
-
                             <i class="fab fa-whatsapp"></i>
-                            <span>أرسل صور المكيف</span>
-
+                            <span data-i18n="hero.whatsapp">تواصل عبر واتساب</span>
                         </a>
 
                     </div>
 
-                </div>
+                    <div class="hero-features">
 
+                        <div class="hero-feature">
+                            <i class="fas fa-snowflake"></i>
+                            <span data-i18n="hero.cardAirConditioners">شراء وبيع المكيفات</span>
+                        </div>
+
+                        <div class="hero-feature">
+                            <i class="fas fa-recycle"></i>
+                            <span data-i18n="hero.cardScrap">شراء وبيع السكراب</span>
+                        </div>
+
+                        <div class="hero-feature">
+                            <i class="fas fa-hand-holding-dollar"></i>
+                            <span data-i18n="hero.cardEvaluation">تقييم المشتريات</span>
+                        </div>
+
+                    </div>
+
+                </div>
 
                 <div class="hero-image">
 
                     <img
-                        src="images/menu6.jpeg"
-                        alt="شراء مكيفات مستعملة ومكيفات سكراب"
-                        class="main-image"
+                        src="images/site-billboard-very-close.png"
+                        alt="مكيفات وسكراب مستعمل"
+                        data-ar-alt="مكيفات وسكراب مستعمل"
+                        data-en-alt="Used air conditioners and scrap"
                         fetchpriority="high"
+                        width="600"
+                        height="410"
+                        decoding="async"
                     >
 
-                    <div class="floating-elements">
-
-                        <div class="floating-card">
-                            <i class="fas fa-snowflake"></i>
-                            <span>شراء جميع أنواع المكيفات</span>
-                        </div>
-
-                        <div class="floating-card">
-                            <i class="fas fa-clock"></i>
-                            <span>تواصل سريع</span>
-                        </div>
-
-                        <div class="floating-card">
-                            <i class="fas fa-handshake"></i>
-                            <span>تقييم وشراء</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= SERVICES ================= -->
-
-    <section class="services" id="services">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <h2 class="section-title">
-                    خدمات شراء المكيفات والسكراب والأغراض المستعملة
-                </h2>
-
-                <p class="section-subtitle">
-                    نشتري المنتجات المستعملة والخردة في جدة ومكة ورابغ.
-                    اختر الخدمة التي تريد بيعها وتواصل معنا.
-                </p>
-
-            </div>
-
-
-            <div class="services-container">
-
-                <!-- 1: Used Air Conditioners -->
-
-                <div class="service-card">
-
-                    <div class="service-image">
-
-                        <img
-                            src="images/menu6.jpeg"
-                            alt="شراء مكيفات مستعملة في جدة"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-                    <h3>شراء مكيفات مستعملة جدة</h3>
-
-                    <p>
-                        نشتري المكيفات المستعملة بمختلف أنواعها
-                        وحالاتها، سواء كانت تعمل أو تحتاج إلى صيانة.
-                    </p>
-
-                    <ul class="service-features">
-                        <li>مكيفات سبليت</li>
-                        <li>مكيفات شباك</li>
-                        <li>مكيفات منزلية وتجارية</li>
-                    </ul>
-
-                    <a
-                        href="https://wa.me/966508777407?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A8%D9%8A%D8%B9%20%D9%85%D9%83%D9%8A%D9%81%20%D9%85%D8%B3%D8%AA%D8%B9%D9%85%D9%84"
-                        class="service-btn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        بيع مكيف مستعمل
-                    </a>
-
-                </div>
-
-
-                <!-- 2: Broken Air Conditioners -->
-
-                <div class="service-card">
-
-                    <div class="service-image">
-
-                        <img
-                            src="images/menu6.jpeg"
-                            alt="شراء مكيفات خربانة ولا تعمل"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-                    <h3>شراء مكيفات خربانة</h3>
-
-                    <p>
-                        نشتري المكيفات القديمة والمتعطلة
-                        والتي لا تعمل، حسب النوع والحالة.
-                    </p>
-
-                    <ul class="service-features">
-                        <li>مكيف لا يعمل</li>
-                        <li>مكيف يحتاج إلى إصلاح</li>
-                        <li>مكيفات قديمة</li>
-                    </ul>
-
-                    <a
-                        href="https://wa.me/966508777407?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A8%D9%8A%D8%B9%20%D9%85%D9%83%D9%8A%D9%81%20%D8%AE%D8%B1%D8%A8%D8%A7%D9%86"
-                        class="service-btn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        بيع مكيف خربان
-                    </a>
-
-                </div>
-
-
-                <!-- 3: AC Scrap -->
-
-                <div class="service-card">
-
-                    <div class="service-image">
-
-                        <img
-                            src="images/menu6.jpeg"
-                            alt="شراء سكراب المكيفات والكمبروسرات"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-                    <h3>شراء سكراب المكيفات</h3>
-
-                    <p>
-                        نشتري مكيفات السكراب القديمة
-                        وقطع المكيفات والكمبروسرات المستعملة.
-                    </p>
-
-                    <ul class="service-features">
-                        <li>سكراب مكيفات</li>
-                        <li>كمبروسرات المكيفات</li>
-                        <li>قطع غيار المكيفات</li>
-                    </ul>
-
-                    <a
-                        href="https://wa.me/966508777407?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A8%D9%8A%D8%B9%20%D8%B3%D9%83%D8%B1%D8%A7%D8%A8%20%D9%85%D9%83%D9%8A%D9%81%D8%A7%D8%AA"
-                        class="service-btn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        بيع سكراب مكيفات
-                    </a>
-
-                </div>
-
-
-                <!-- 4: Copper -->
-
-                <div class="service-card">
-
-                    <div class="service-image">
-
-                        <img
-                            src="images/menu4.jpg"
-                            alt="شراء نحاس وسكراب نحاس في جدة"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-                    <h3>شراء النحاس وسكراب النحاس</h3>
-
-                    <p>
-                        نشتري النحاس المستعمل والخردة
-                        والأسلاك النحاسية ونحاس المكيفات.
-                    </p>
-
-                    <ul class="service-features">
-                        <li>نحاس المكيفات</li>
-                        <li>أسلاك النحاس</li>
-                        <li>سكراب النحاس</li>
-                    </ul>
-
-                    <a href="tel:+966508777407" class="service-btn">
-                        اتصل لبيع النحاس
-                    </a>
-
-                </div>
-
-
-                <!-- 5: Aluminum -->
-
-                <div class="service-card">
-
-                    <div class="service-image">
-
-                        <img
-                            src="images/menu3.jpg"
-                            alt="شراء سكراب الألمنيوم في جدة"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-                    <h3>شراء الألمنيوم والسكراب</h3>
-
-                    <p>
-                        نشتري الألمنيوم المستعمل وخردة الألمنيوم
-                        بمختلف الأنواع والكميات.
-                    </p>
-
-                    <ul class="service-features">
-                        <li>ألمنيوم مستعمل</li>
-                        <li>شبابيك وأبواب ألمنيوم</li>
-                        <li>سكراب الألمنيوم</li>
-                    </ul>
-
-                    <a href="tel:+966508777407" class="service-btn">
-                        اتصل لبيع الألمنيوم
-                    </a>
-
-                </div>
-
-
-                <!-- 6: Iron -->
-
-                <div class="service-card">
-
-                    <div class="service-image">
-
-                        <img
-                            src="images/menu5.jpg"
-                            alt="شراء الحديد وسكراب الحديد"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-                    <h3>شراء الحديد والسكراب</h3>
-
-                    <p>
-                        نشتري الحديد والخردة والمعادن المستعملة
-                        حسب النوع والكمية.
-                    </p>
-
-                    <ul class="service-features">
-                        <li>حديد مستعمل</li>
-                        <li>خردة الحديد</li>
-                        <li>معادن وسكراب</li>
-                    </ul>
-
-                    <a href="tel:+966508777407" class="service-btn">
-                        اتصل لبيع الحديد
-                    </a>
-
-                </div>
-
-
-                <!-- 7: Electrical Appliances -->
-
-                <div class="service-card">
-
-                    <div class="service-image">
-
-                        <img
-                            src="images/menu6.jpeg"
-                            alt="شراء الأجهزة الكهربائية المستعملة"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-                    <h3>شراء الأجهزة الكهربائية</h3>
-
-                    <p>
-                        نشتري الأجهزة الكهربائية المنزلية
-                        المستعملة حسب حالتها ونوعها.
-                    </p>
-
-                    <ul class="service-features">
-                        <li>ثلاجات</li>
-                        <li>غسالات</li>
-                        <li>أجهزة منزلية</li>
-                    </ul>
-
-                    <a href="tel:+966508777407" class="service-btn">
-                        اتصل للاستفسار
-                    </a>
-
-                </div>
-
-
-                <!-- 8: Restaurant Equipment -->
-
-                <div class="service-card">
-
-                    <div class="service-image">
-
-                        <img
-                            src="images/menu7.png"
-                            alt="شراء معدات المطاعم والكافيهات"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-                    <h3>شراء معدات المطاعم</h3>
-
-                    <p>
-                        نشتري معدات المطاعم والكافيهات
-                        والأجهزة والتجهيزات المستعملة.
-                    </p>
-
-                    <ul class="service-features">
-                        <li>معدات المطابخ</li>
-                        <li>أجهزة الكافيهات</li>
-                        <li>تجهيزات المطاعم</li>
-                    </ul>
-
-                    <a href="tel:+966508777407" class="service-btn">
-                        اتصل للاستفسار
-                    </a>
-
-                </div>
-
-
-                <!-- 9: Used Kitchens -->
-
-                <div class="service-card">
-
-                    <div class="service-image">
-
-                        <img
-                            src="images/menu2.jpeg"
-                            alt="شراء المطابخ المستعملة"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-                    <h3>شراء المطابخ المستعملة</h3>
-
-                    <p>
-                        نشتري المطابخ والخزائن وتجهيزات المطابخ
-                        المستعملة حسب الحالة والمكونات.
-                    </p>
-
-                    <ul class="service-features">
-                        <li>مطابخ منزلية</li>
-                        <li>خزائن مطابخ</li>
-                        <li>تجهيزات مستعملة</li>
-                    </ul>
-
-                    <a href="tel:+966508777407" class="service-btn">
-                        اتصل لبيع المطبخ
-                    </a>
-
-                </div>
-
-
-                <!-- 10: Used Furniture -->
-
-                <div class="service-card">
-
-                    <div class="service-image">
-
-                        <img
-                            src="images/menu2.jpeg"
-                            alt="شراء الأثاث المستعمل في جدة"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-                    <h3>شراء الأثاث المستعمل</h3>
-
-                    <p>
-                        نشتري الأثاث المنزلي والمكتبي المستعمل
-                        بمختلف الأنواع والحالات.
-                    </p>
-
-                    <ul class="service-features">
-                        <li>غرف النوم</li>
-                        <li>المجالس والصالونات</li>
-                        <li>الأثاث المنزلي والمكتبي</li>
-                    </ul>
-
-                    <a href="tel:+966508777407" class="service-btn">
-                        اتصل لبيع الأثاث
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= HOW IT WORKS ================= -->
-
-    <section class="about" id="how-it-works">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <h2 class="section-title">
-                    كيف تبيع مكيفك أو السكراب؟
-                </h2>
-
-                <p class="section-subtitle">
-                    خطوات بسيطة للتواصل معنا وعرض ما تريد بيعه.
-                </p>
-
-            </div>
-
-
-            <div class="about-grid">
-
-                <div class="about-card">
-
-                    <div class="about-icon">
-                        <i class="fas fa-camera"></i>
-                    </div>
-
-                    <h3>أرسل الصور</h3>
-
-                    <p>
-                        أرسل صور المكيف أو السكراب عبر واتساب.
-                    </p>
-
-                </div>
-
-
-                <div class="about-card">
-
-                    <div class="about-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-
-                    <h3>تواصل معنا</h3>
-
-                    <p>
-                        حدد نوع المنتج والمدينة والكمية.
-                    </p>
-
-                </div>
-
-
-                <div class="about-card">
-
-                    <div class="about-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-
-                    <h3>تقييم واتفاق</h3>
-
-                    <p>
-                        يتم التواصل معك لتقييم المعروض والاتفاق.
-                    </p>
-
-                </div>
-
-
-                <div class="about-card">
-
-                    <div class="about-icon">
-                        <i class="fas fa-truck"></i>
-                    </div>
-
-                    <h3>الاستلام</h3>
-
-                    <p>
-                        يتم ترتيب الاستلام وفق الاتفاق.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= ABOUT ================= -->
-
-    <section class="about" id="about">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <h2 class="section-title">
-                    لماذا تتواصل مع أبو خالد؟
-                </h2>
-
-                <p class="section-subtitle">
-                    خدمات شراء المكيفات والسكراب والأغراض المستعملة
-                    في جدة ومكة ورابغ.
-                </p>
-
-            </div>
-
-
-            <div class="about-grid">
-
-                <div class="about-card">
-
-                    <div class="about-icon">
+                    <div class="floating-card floating-card-one">
                         <i class="fas fa-snowflake"></i>
+                        <span data-i18n="hero.floatingAir">مكيفات مستعملة</span>
                     </div>
 
-                    <h3>شراء المكيفات</h3>
-
-                    <p>
-                        مكيفات مستعملة وخربانة وسكراب.
-                    </p>
-
-                </div>
-
-
-                <div class="about-card">
-
-                    <div class="about-icon">
-                        <i class="fas fa-coins"></i>
+                    <div class="floating-card floating-card-two">
+                        <i class="fas fa-recycle"></i>
+                        <span data-i18n="hero.floatingScrap">سكراب ومعادن</span>
                     </div>
 
-                    <h3>تقييم المعروض</h3>
-
-                    <p>
-                        تقييم المنتجات حسب النوع والحالة والكمية.
-                    </p>
-
-                </div>
-
-
-                <div class="about-card">
-
-                    <div class="about-icon">
-                        <i class="fas fa-headset"></i>
+                    <div class="floating-card floating-card-three">
+                        <i class="fas fa-couch"></i>
+                        <span data-i18n="hero.floatingFurniture">أثاث مستعمل</span>
                     </div>
-
-                    <h3>سهولة التواصل</h3>
-
-                    <p>
-                        التواصل عبر الاتصال المباشر أو واتساب.
-                    </p>
-
-                </div>
-
-
-                <div class="about-card">
-
-                    <div class="about-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-
-                    <h3>مناطق الخدمة</h3>
-
-                    <p>
-                        جدة ومكة ورابغ.
-                    </p>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- ================= FAQ ================= -->
+        <!-- ================= SERVICES ================= -->
+        <section class="services section" id="services">
 
-    <section class="services" id="faq">
+            <div class="container">
 
-        <div class="container">
+                <div class="section-heading">
 
-            <div class="section-header">
+                    <span class="section-subtitle" data-i18n="services.subtitle">خدماتنا</span>
 
-                <h2 class="section-title">
-                    أسئلة شائعة عن شراء المكيفات والسكراب
-                </h2>
+                    <h2 data-i18n="services.title">ماذا نشتري ونبيع؟</h2>
 
-            </div>
+                    <p data-i18n="services.description">
+                        نستقبل طلبات شراء وبيع مختلف أنواع المكيفات والسكراب والمعادن والأجهزة والأثاث المستعمل.
+                    </p>
 
+                </div>
 
-            <div class="service-card">
+                <div class="services-grid">
 
-                <h3>هل تشترون المكيفات الخربانة؟</h3>
-
-                <p>
-                    نعم، نشتري المكيفات المستعملة والخربانة
-                    والتي لا تعمل، وكذلك مكيفات السكراب.
-                </p>
-
-
-                <h3>هل تشترون مكيفات الشباك والسبليت؟</h3>
-
-                <p>
-                    نستقبل عروض بيع مختلف أنواع المكيفات،
-                    ويمكنك إرسال صور المكيف للتواصل والتقييم.
-                </p>
-
-
-                <h3>هل تشترون كمبروسرات المكيفات والنحاس؟</h3>
-
-                <p>
-                    نعم، يمكنك التواصل معنا لعرض كمبروسرات
-                    المكيفات والنحاس والخردة.
-                </p>
-
-
-                <h3>ما المدن التي تغطيها الخدمة؟</h3>
-
-                <p>
-                    جدة ومكة ورابغ، ويمكنك التواصل معنا
-                    لتأكيد إمكانية الاستلام في موقعك.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= CONTACT ================= -->
-
-    <section class="contact" id="contact">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <h2 class="section-title">
-                    تواصل معنا لبيع المكيفات والسكراب
-                </h2>
-
-                <p class="section-subtitle">
-                    أرسل صور المكيف أو السكراب عبر واتساب
-                    أو اتصل بنا للاستفسار.
-                </p>
-
-            </div>
-
-
-            <div class="contact-content">
-
-
-                <!-- Contact Information -->
-
-                <div class="contact-info">
-
-
-                    <!-- Phone Numbers -->
-
-                    <div class="contact-card">
-
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
+                    <!-- Service 1 -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/01-used-air-conditioners.jpg" alt="شراء مكيفات مستعملة" data-ar-alt="شراء مكيفات مستعملة" data-en-alt="Buying used air conditioners" loading="lazy" decoding="async" width="600" height="400">
                         </div>
-
-                        <h3>أرقام التواصل</h3>
-
-                        <div class="phone-list">
-
-                            <a href="tel:+966508777407">
-                                +966 50 877 7407
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fas fa-snowflake"></i></div>
+                            <h3 data-i18n="services.airConditioners.title">شراء مكيفات مستعملة</h3>
+                            <p data-i18n="services.airConditioners.description">شراء المكيفات المستعملة بمختلف أنواعها.</p>
+                            <ul class="service-features">
+                                <li>مكيفات سبليت</li>
+                                <li>مكيفات شباك</li>
+                                <li>مكيفات منزلية وتجارية</li>
+                            </ul>
+                            <a href="https://wa.me/966508777407" class="service-link" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                <span data-i18n="services.request">اطلب الخدمة</span>
+                                <i class="fas fa-arrow-left"></i>
                             </a>
+                        </div>
+                    </article>
 
-                            <a href="tel:+966540925179">
-                                +966 54 092 5179
+                    <!-- Service 2 -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/02-broken-air-conditioners.jpg" alt="شراء مكيفات خربانة" data-ar-alt="شراء مكيفات خربانة" data-en-alt="Buying broken air conditioners" loading="lazy" decoding="async" width="600" height="400">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fas fa-tools"></i></div>
+                            <h3 data-i18n="services.brokenAir.title">شراء مكيفات خربانة</h3>
+                            <p data-i18n="services.brokenAir.description">شراء المكيفات المتعطلة وغير الصالحة للتشغيل.</p>
+                            <ul class="service-features">
+                                <li>مكيف لا يعمل</li>
+                                <li>مكيف يحتاج إلى إصلاح</li>
+                                <li>مكيفات قديمة</li>
+                            </ul>
+                            <a href="https://wa.me/966508777407" class="service-link" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                <span data-i18n="services.request">اطلب الخدمة</span>
+                                <i class="fas fa-arrow-left"></i>
                             </a>
-
                         </div>
+                    </article>
 
-                    </div>
-
-
-                    <!-- Service Areas -->
-
-                    <div class="contact-card">
-
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+                    <!-- Service 3 -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/03-ac-scrap-compressors.jpg" alt="سكراب المكيفات والكمبروسرات" data-ar-alt="سكراب المكيفات والكمبروسرات" data-en-alt="AC and compressor scrap" loading="lazy" decoding="async" width="600" height="400">
                         </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fas fa-compress-arrows-alt"></i></div>
+                            <h3 data-i18n="services.airScrap.title">سكراب المكيفات والكمبروسرات</h3>
+                            <p data-i18n="services.airScrap.description">شراء سكراب المكيفات والكمبروسرات المستعملة.</p>
+                            <ul class="service-features">
+                                <li>سكراب مكيفات</li>
+                                <li>كمبروسرات المكيفات</li>
+                                <li>قطع غيار المكيفات</li>
+                            </ul>
+                            <a href="https://wa.me/966508777407" class="service-link" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                <span data-i18n="services.request">اطلب الخدمة</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </article>
 
-                        <h3>مناطق الخدمة</h3>
+                    <!-- Service 4 -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/04-copper-scrap.jpg" alt="شراء النحاس وسكراب النحاس" data-ar-alt="شراء النحاس وسكراب النحاس" data-en-alt="Buying copper and copper scrap" loading="lazy" decoding="async" width="600" height="400">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fas fa-coins"></i></div>
+                            <h3 data-i18n="services.copper.title">شراء النحاس وسكراب النحاس</h3>
+                            <p data-i18n="services.copper.description">شراء النحاس ومخلفات النحاس بمختلف أنواعها.</p>
+                            <ul class="service-features">
+                                <li>نحاس المكيفات</li>
+                                <li>أسلاك النحاس</li>
+                                <li>سكراب النحاس</li>
+                            </ul>
+                            <a href="https://wa.me/966508777407" class="service-link" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                <span data-i18n="services.request">اطلب الخدمة</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </article>
 
-                        <p>
-                            جدة، مكة، رابغ والمناطق المجاورة.
+                    <!-- Service 5 -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/05-aluminum-scrap.jpg" alt="شراء الألمنيوم والسكراب" data-ar-alt="شراء الألمنيوم والسكراب" data-en-alt="Buying aluminum and scrap" loading="lazy" decoding="async" width="600" height="400">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fas fa-industry"></i></div>
+                            <h3 data-i18n="services.aluminum.title">شراء الألمنيوم والسكراب</h3>
+                            <p data-i18n="services.aluminum.description">شراء الألمنيوم ومخلفات الألمنيوم المستعملة.</p>
+                            <ul class="service-features">
+                                <li>ألمنيوم مستعمل</li>
+                                <li>شبابيك وأبواب ألمنيوم</li>
+                                <li>سكراب الألمنيوم</li>
+                            </ul>
+                            <a href="https://wa.me/966508777407" class="service-link" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                <span data-i18n="services.request">اطلب الخدمة</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 6 -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/06-iron-scrap.jpg" alt="شراء الحديد والسكراب" data-ar-alt="شراء الحديد والسكراب" data-en-alt="Buying iron and scrap" loading="lazy" decoding="async" width="600" height="400">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fas fa-hammer"></i></div>
+                            <h3 data-i18n="services.iron.title">شراء الحديد والسكراب</h3>
+                            <p data-i18n="services.iron.description">شراء الحديد ومخلفات الحديد والسكراب المعدني.</p>
+                            <ul class="service-features">
+                                <li>حديد مستعمل</li>
+                                <li>خردة الحديد</li>
+                                <li>معادن وسكراب</li>
+                            </ul>
+                            <a href="https://wa.me/966508777407" class="service-link" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                <span data-i18n="services.request">اطلب الخدمة</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 7 -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/07-electrical-appliances.jpg" alt="شراء الأجهزة الكهربائية" data-ar-alt="شراء الأجهزة الكهربائية" data-en-alt="Buying electrical appliances" loading="lazy" decoding="async" width="600" height="400">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fas fa-plug"></i></div>
+                            <h3 data-i18n="services.electrical.title">شراء الأجهزة الكهربائية</h3>
+                            <p data-i18n="services.electrical.description">شراء الأجهزة الكهربائية المستعملة والمتعطلة.</p>
+                            <ul class="service-features">
+                                <li>ثلاجات</li>
+                                <li>غسالات</li>
+                                <li>أجهزة منزلية</li>
+                            </ul>
+                            <a href="https://wa.me/966508777407" class="service-link" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                <span data-i18n="services.request">اطلب الخدمة</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 8 -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/08-restaurant-cafe-equipment.jpg" alt="شراء معدات المطاعم والكافيهات" data-ar-alt="شراء معدات المطاعم والكافيهات" data-en-alt="Buying restaurant and cafe equipment" loading="lazy" decoding="async" width="600" height="400">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fas fa-utensils"></i></div>
+                            <h3 data-i18n="services.restaurant.title">شراء معدات المطاعم والكافيهات</h3>
+                            <p data-i18n="services.restaurant.description">شراء معدات المطاعم والكافيهات المستعملة.</p>
+                            <ul class="service-features">
+                                <li>معدات المطابخ</li>
+                                <li>أجهزة الكافيهات</li>
+                                <li>تجهيزات المطاعم</li>
+                            </ul>
+                            <a href="https://wa.me/966508777407" class="service-link" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                <span data-i18n="services.request">اطلب الخدمة</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 9 -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/09-used-kitchens.jpg" alt="شراء المطابخ المستعملة" data-ar-alt="شراء المطابخ المستعملة" data-en-alt="Buying used kitchens" loading="lazy" decoding="async" width="600" height="400">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fas fa-kitchen-set"></i></div>
+                            <h3 data-i18n="services.kitchens.title">شراء المطابخ المستعملة</h3>
+                            <p data-i18n="services.kitchens.description">شراء المطابخ المستعملة ومكوناتها.</p>
+                            <ul class="service-features">
+                                <li>مطابخ منزلية</li>
+                                <li>خزائن مطابخ</li>
+                                <li>تجهيزات مستعملة</li>
+                            </ul>
+                            <a href="https://wa.me/966508777407" class="service-link" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                <span data-i18n="services.request">اطلب الخدمة</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 10 -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/10-used-furniture.jpg" alt="شراء الأثاث المستعمل" data-ar-alt="شراء الأثاث المستعمل" data-en-alt="Buying used furniture" loading="lazy" decoding="async" width="600" height="400">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fas fa-couch"></i></div>
+                            <h3 data-i18n="services.furniture.title">شراء الأثاث المستعمل</h3>
+                            <p data-i18n="services.furniture.description">شراء الأثاث المنزلي والمكتبي المستعمل.</p>
+                            <ul class="service-features">
+                                <li>غرف النوم</li>
+                                <li>المجالس والصالونات</li>
+                                <li>الأثاث المنزلي والمكتبي</li>
+                            </ul>
+                            <a href="https://wa.me/966508777407" class="service-link" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                <span data-i18n="services.request">اطلب الخدمة</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 11 -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/11-cables-wires.jpg" alt="شراء الكيابل والأسلاك" data-ar-alt="شراء الكيابل والأسلاك" data-en-alt="Buying cables and wires" loading="lazy" decoding="async" width="600" height="400">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fas fa-plug-circle-bolt"></i></div>
+                            <h3 data-i18n="services.cables.title">شراء الكيابل والأسلاك</h3>
+                            <p data-i18n="services.cables.description">شراء الكيابل والأسلاك ومخلفات التمديدات الكهربائية.</p>
+                            <ul class="service-features">
+                                <li>كيابل كهرباء منزلية وصناعية</li>
+                                <li>أسلاك نحاس وألمنيوم</li>
+                                <li>كيابل تالفة أو مستعملة</li>
+                            </ul>
+                            <a href="https://wa.me/966508777407" class="service-link" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                <span data-i18n="services.request">اطلب الخدمة</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 12 -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/12-factory-scrap-equipment.jpg" alt="شراء سكراب المصانع والمعدات" data-ar-alt="شراء سكراب المصانع والمعدات" data-en-alt="Buying factory and equipment scrap" loading="lazy" decoding="async" width="600" height="400">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fas fa-gears"></i></div>
+                            <h3 data-i18n="services.factory.title">شراء سكراب المصانع والمعدات</h3>
+                            <p data-i18n="services.factory.description">شراء السكراب والمعدات الصناعية المستعملة.</p>
+                            <ul class="service-features">
+                                <li>مكائن ومعدات صناعية قديمة</li>
+                                <li>رفوف وهياكل ومخلفات معدنية</li>
+                                <li>سكراب المستودعات والمشاريع</li>
+                            </ul>
+                            <a href="https://wa.me/966508777407" class="service-link" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                <span data-i18n="services.request">اطلب الخدمة</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 13 -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/13-demolition-building-scrap.jpg" alt="شراء سكراب الهدم والمباني" data-ar-alt="شراء سكراب الهدم والمباني" data-en-alt="Buying demolition and building scrap" loading="lazy" decoding="async" width="600" height="400">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fas fa-building"></i></div>
+                            <h3 data-i18n="services.demolition.title">شراء سكراب الهدم والمباني</h3>
+                            <p data-i18n="services.demolition.description">شراء مخلفات الهدم والمباني والمواد القابلة لإعادة التدوير.</p>
+                            <ul class="service-features">
+                                <li>مخلفات هدم</li>
+                                <li>حديد تسليح مستعمل</li>
+                                <li>مواد بناء قابلة لإعادة التدوير</li>
+                            </ul>
+                            <a href="https://wa.me/966508777407" class="service-link" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                <span data-i18n="services.request">اطلب الخدمة</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 14 -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/14-contracting-project-scrap.jpg" alt="شراء سكراب مشاريع المقاولات" data-ar-alt="شراء سكراب مشاريع المقاولات" data-en-alt="Buying construction project scrap" loading="lazy" decoding="async" width="600" height="400">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
+                            <h3 data-i18n="services.construction.title">شراء سكراب مشاريع المقاولات</h3>
+                            <p data-i18n="services.construction.description">شراء مخلفات المشاريع والمقاولات من المواد المستعملة.</p>
+                            <ul class="service-features">
+                                <li>مخلفات مشاريع</li>
+                                <li>معدات مقاولات مستعملة</li>
+                                <li>مواد بناء فائضة</li>
+                            </ul>
+                            <a href="https://wa.me/966508777407" class="service-link" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                <span data-i18n="services.request">اطلب الخدمة</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 15 -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/15-warehouse-workshop-scrap.jpg" alt="شراء سكراب المستودعات والورش" data-ar-alt="شراء سكراب المستودعات والورش" data-en-alt="Buying warehouse and workshop scrap" loading="lazy" decoding="async" width="600" height="400">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fas fa-warehouse"></i></div>
+                            <h3 data-i18n="services.warehouses.title">شراء سكراب المستودعات والورش</h3>
+                            <p data-i18n="services.warehouses.description">شراء الموجودات والمعدات والسكراب من المستودعات والورش.</p>
+                            <ul class="service-features">
+                                <li>موجودات مستودعات</li>
+                                <li>معدات ورش</li>
+                                <li>سكراب متنوع</li>
+                            </ul>
+                            <a href="https://wa.me/966508777407" class="service-link" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                <span data-i18n="services.request">اطلب الخدمة</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 16 -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/16-metal-structures-products.jpg" alt="شراء الهياكل والمنتجات المعدنية" data-ar-alt="شراء الهياكل والمنتجات المعدنية" data-en-alt="Buying metal structures and products" loading="lazy" decoding="async" width="600" height="400">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fas fa-industry"></i></div>
+                            <h3 data-i18n="services.metal.title">شراء الهياكل والمنتجات المعدنية</h3>
+                            <p data-i18n="services.metal.description">شراء الهياكل والمنتجات المعدنية المستعملة.</p>
+                            <ul class="service-features">
+                                <li>هياكل معدنية</li>
+                                <li>منتجات معدنية مصنعة</li>
+                                <li>حديد وألمنيوم صناعي</li>
+                            </ul>
+                            <a href="https://wa.me/966508777407" class="service-link" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                <span data-i18n="services.request">اطلب الخدمة</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+        <section class="how-it-works section" id="how-it-works">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-subtitle" data-i18n="process.subtitle">خطوات بسيطة</span>
+
+                    <h2 data-i18n="process.title">كيف تتم عملية الشراء؟</h2>
+
+                    <p data-i18n="process.description">
+                        تواصل معنا وأرسل تفاصيل الأغراض التي ترغب في بيعها.
+                    </p>
+
+                </div>
+
+                <div class="steps-grid">
+
+                    <article class="step-card">
+                        <div class="step-number">01</div>
+                        <div class="step-icon"><i class="fas fa-phone-volume"></i></div>
+                        <h3 data-i18n="process.step1.title">تواصل معنا</h3>
+                        <p data-i18n="process.step1.description">اتصل بنا أو أرسل طلبك عبر واتساب.</p>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-number">02</div>
+                        <div class="step-icon"><i class="fas fa-camera"></i></div>
+                        <h3 data-i18n="process.step2.title">أرسل التفاصيل والصور</h3>
+                        <p data-i18n="process.step2.description">وضح نوع الأغراض وأرسل صورًا لها عبر واتساب.</p>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-number">03</div>
+                        <div class="step-icon"><i class="fas fa-clipboard-check"></i></div>
+                        <h3 data-i18n="process.step3.title">تقييم الأغراض</h3>
+                        <p data-i18n="process.step3.description">تتم مراجعة التفاصيل وتقييم الأغراض حسب حالتها وكميتها.</p>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-number">04</div>
+                        <div class="step-icon"><i class="fas fa-handshake"></i></div>
+                        <h3 data-i18n="process.step4.title">الاتفاق وإتمام العملية</h3>
+                        <p data-i18n="process.step4.description">يتم الاتفاق على التفاصيل قبل إتمام عملية الشراء.</p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PRICING ================= -->
+        <section class="pricing section" id="pricing">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-subtitle" data-i18n="pricing.subtitle">تقييم المشتريات</span>
+
+                    <h2 data-i18n="pricing.title">ما العوامل التي تؤثر على التقييم؟</h2>
+
+                    <p data-i18n="pricing.description">تختلف قيمة الأغراض حسب نوعها وحالتها وكميتها.</p>
+
+                </div>
+
+                <div class="pricing-grid">
+
+                    <article class="pricing-card">
+                        <div class="pricing-icon"><i class="fas fa-box"></i></div>
+                        <h3 data-i18n="pricing.factor1.title">نوع المادة</h3>
+                        <p data-i18n="pricing.factor1.description">يختلف التقييم باختلاف نوع المادة أو الجهاز.</p>
+                    </article>
+
+                    <article class="pricing-card">
+                        <div class="pricing-icon"><i class="fas fa-weight-hanging"></i></div>
+                        <h3 data-i18n="pricing.factor2.title">الكمية والوزن</h3>
+                        <p data-i18n="pricing.factor2.description">تؤثر الكمية والوزن في عملية التقييم.</p>
+                    </article>
+
+                    <article class="pricing-card">
+                        <div class="pricing-icon"><i class="fas fa-tools"></i></div>
+                        <h3 data-i18n="pricing.factor3.title">الحالة</h3>
+                        <p data-i18n="pricing.factor3.description">تؤخذ حالة الغرض ومدى صلاحيته في الاعتبار.</p>
+                    </article>
+
+                    <article class="pricing-card">
+                        <div class="pricing-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3 data-i18n="pricing.factor4.title">الموقع والتفاصيل</h3>
+                        <p data-i18n="pricing.factor4.description">تساعد معلومات الموقع والصور في مراجعة الطلب.</p>
+                    </article>
+
+                </div>
+
+                <div class="pricing-note">
+                    <i class="fas fa-info-circle"></i>
+                    <p data-i18n="pricing.note">
+                        لا توجد أسعار ثابتة منشورة في الموقع. يتم تحديد التقييم بعد معرفة نوع الأغراض وحالتها وكميتها.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+        <section class="about section" id="about">
+
+            <div class="container">
+
+                <div class="about-container">
+
+                    <div class="about-content">
+
+                        <span class="section-subtitle" data-i18n="about.subtitle">من نحن</span>
+
+                        <h2 data-i18n="about.title">أبو خالد لشراء وبيع المستعمل والسكراب</h2>
+
+                        <p data-i18n="about.description">
+                            نقدم خدمات شراء وبيع المكيفات المستعملة والخربانة والسكراب والمعادن والأجهزة والمطابخ والأثاث المستعمل، مع استقبال طلبات العملاء في جميع أحياء جدة ومكة المكرمة ورابغ.
                         </p>
 
-                    </div>
-
-
-                    <!-- Website -->
-
-                    <div class="contact-card">
-
-                        <div class="contact-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-
-                        <h3>الموقع الإلكتروني</h3>
-
-                        <a href="https://abu-khalid.netlify.app/">
-                            abu-khalid.netlify.app
+                        <a href="#contact" class="btn btn-primary">
+                            <span data-i18n="about.button">تواصل معنا</span>
+                            <i class="fas fa-arrow-left"></i>
                         </a>
 
                     </div>
 
+                    <div class="about-grid">
 
-                    <!-- Working Hours -->
-
-                    <div class="contact-card">
-
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
+                        <div class="about-card">
+                            <i class="fas fa-snowflake"></i>
+                            <h3 data-i18n="about.item1">المكيفات</h3>
+                            <p data-i18n="about.item1Description">مستعملة وخربانة وسكراب.</p>
                         </div>
 
-                        <h3>ساعات العمل</h3>
+                        <div class="about-card">
+                            <i class="fas fa-recycle"></i>
+                            <h3 data-i18n="about.item2">المعادن والسكراب</h3>
+                            <p data-i18n="about.item2Description">نحاس وألمنيوم وحديد.</p>
+                        </div>
 
-                        <p>
-                            يوميًا من 7:00 صباحًا حتى 12:00 مساءً.
-                        </p>
+                        <div class="about-card">
+                            <i class="fas fa-kitchen-set"></i>
+                            <h3 data-i18n="about.item3">المطابخ والمعدات</h3>
+                            <p data-i18n="about.item3Description">مطابخ ومعدات مطاعم مستعملة.</p>
+                        </div>
+
+                        <div class="about-card">
+                            <i class="fas fa-couch"></i>
+                            <h3 data-i18n="about.item4">الأثاث المستعمل</h3>
+                            <p data-i18n="about.item4Description">أثاث منزلي ومكتبي.</p>
+                        </div>
+
+                        <div class="about-card">
+                            <i class="fas fa-industry"></i>
+                            <h3 data-i18n="about.item5">المعدات الصناعية</h3>
+                            <p data-i18n="about.item5Description">معدات ومخلفات المصانع والورش.</p>
+                        </div>
+
+                        <div class="about-card">
+                            <i class="fas fa-location-dot"></i>
+                            <h3 data-i18n="about.item6">نطاق الخدمة</h3>
+                            <p data-i18n="about.item6Description">جميع أحياء جدة ومكة ورابغ.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FAQ ================= -->
+        <section class="faq section" id="faq">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-subtitle" data-i18n="faq.subtitle">الأسئلة الشائعة</span>
+
+                    <h2 data-i18n="faq.title">إجابات عن استفساراتك</h2>
+
+                    <p data-i18n="faq.description">بعض المعلومات التي قد تحتاج إلى معرفتها قبل التواصل معنا.</p>
+
+                </div>
+
+                <div class="faq-grid">
+
+                    <article class="service-card faq-card">
+                        <h3 data-i18n="faq.q1">ما أنواع المكيفات التي يتم شراؤها؟</h3>
+                        <p data-i18n="faq.a1">يتم استقبال طلبات شراء المكيفات المستعملة والخربانة وسكراب المكيفات والكمبروسرات.</p>
+                    </article>
+
+                    <article class="service-card faq-card">
+                        <h3 data-i18n="faq.q2">هل يتم شراء المكيفات الخربانة؟</h3>
+                        <p data-i18n="faq.a2">نعم، يمكنك إرسال صور المكيف وتفاصيل حالته لمراجعة طلبك.</p>
+                    </article>
+
+                    <article class="service-card faq-card">
+                        <h3 data-i18n="faq.q3">هل يتم شراء النحاس والألمنيوم؟</h3>
+                        <p data-i18n="faq.a3">نعم، يمكنك إرسال تفاصيل النحاس والألمنيوم والكميات المتوفرة لديك.</p>
+                    </article>
+
+                    <article class="service-card faq-card">
+                        <h3 data-i18n="faq.q4">هل يتم شراء الحديد والسكراب؟</h3>
+                        <p data-i18n="faq.a4">يتم استقبال طلبات شراء الحديد والسكراب المعدني ومخلفات المشاريع.</p>
+                    </article>
+
+                    <article class="service-card faq-card">
+                        <h3 data-i18n="faq.q5">هل يتم شراء المطابخ المستعملة؟</h3>
+                        <p data-i18n="faq.a5">نعم، يمكنك إرسال صور المطبخ وتفاصيله عبر واتساب.</p>
+                    </article>
+
+                    <article class="service-card faq-card">
+                        <h3 data-i18n="faq.q6">هل يتم شراء الأثاث المستعمل؟</h3>
+                        <p data-i18n="faq.a6">نعم، يمكنك إرسال صور الأثاث وتحديد المدينة ونوع الأغراض.</p>
+                    </article>
+
+                    <article class="service-card faq-card">
+                        <h3 data-i18n="faq.q7">هل يتم شراء معدات المطاعم؟</h3>
+                        <p data-i18n="faq.a7">يتم استقبال طلبات شراء معدات المطاعم والكافيهات المستعملة.</p>
+                    </article>
+
+                    <article class="service-card faq-card">
+                        <h3 data-i18n="faq.q8">ما المدن التي تشملها الخدمة؟</h3>
+                        <p data-i18n="faq.a8">تشمل الخدمة جميع أحياء جدة، بالإضافة إلى مكة المكرمة ورابغ.</p>
+                    </article>
+
+                    <article class="service-card faq-card">
+                        <h3 data-i18n="faq.q9">كيف أرسل صور الأغراض؟</h3>
+                        <p data-i18n="faq.a9">تواصل عبر واتساب ثم أرفق الصور في المحادثة.</p>
+                    </article>
+
+                    <article class="service-card faq-card">
+                        <h3 data-i18n="faq.q10">كيف يتم تحديد السعر؟</h3>
+                        <p data-i18n="faq.a10">يعتمد التقييم على نوع الأغراض وحالتها وكميتها والتفاصيل المرسلة.</p>
+                    </article>
+
+                    <article class="service-card faq-card">
+                        <h3 data-i18n="faq.q11">هل توجد أسعار ثابتة في الموقع؟</h3>
+                        <p data-i18n="faq.a11">لا توجد أسعار ثابتة منشورة؛ يتم تقييم الطلب بعد معرفة التفاصيل.</p>
+                    </article>
+
+                    <article class="service-card faq-card">
+                        <h3 data-i18n="faq.q12">هل يمكن التواصل هاتفيًا؟</h3>
+                        <p data-i18n="faq.a12">نعم، يمكنك الاتصال على أرقام التواصل الموجودة في الموقع.</p>
+                    </article>
+
+                    <article class="service-card faq-card">
+                        <h3 data-i18n="faq.q13">هل يمكن إرسال طلب عبر الموقع؟</h3>
+                        <p data-i18n="faq.a13">نعم، املأ نموذج التواصل وسيتم فتح واتساب لتتمكن من مراجعة رسالتك وإرسالها.</p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+        <section class="contact section" id="contact">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-subtitle" data-i18n="contact.subtitle">تواصل معنا</span>
+
+                    <h2 data-i18n="contact.title">هل لديك أغراض ترغب في بيعها؟</h2>
+
+                    <p data-i18n="contact.description">
+                        أرسل تفاصيل الأغراض والمدينة، ويمكنك إرفاق الصور بعد فتح محادثة واتساب.
+                    </p>
+
+                </div>
+
+                <div class="contact-container">
+
+                    <div class="contact-info">
+
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h3 data-i18n="contact.phoneTitle">أرقام الاتصال</h3>
+                                <div class="phone-list">
+                                    <a href="tel:+966508777407" dir="ltr">+966 50 877 7407</a>
+                                    <a href="tel:+966540925179" dir="ltr">+966 54 092 5179</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <h3 data-i18n="contact.whatsappTitle">واتساب</h3>
+                                <a href="https://wa.me/966508777407" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                                    <span data-i18n="contact.whatsappText">تواصل معنا عبر واتساب</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon"><i class="fas fa-globe"></i></div>
+                            <div>
+                                <h3 data-i18n="contact.websiteTitle">الموقع الإلكتروني</h3>
+                                <a href="https://abu-khalid.netlify.app/" target="_blank" rel="noopener noreferrer">
+                                    abu-khalid.netlify.app
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card location-card">
+                            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="location-content">
+                                <h3 data-i18n="contact.locationTitle">موقعنا ونطاق الخدمة</h3>
+                                <p data-i18n="contact.locationText">
+                                    جدة، المملكة العربية السعودية. نخدم جميع أحياء جدة، بالإضافة إلى مكة المكرمة ورابغ.
+                                </p>
+                                <div class="google-map-container">
+                                    <iframe
+                                        src="https://www.google.com/maps?q=Jeddah%2C%20Saudi%20Arabia&output=embed"
+                                        title="خريطة مدينة جدة - المملكة العربية السعودية"
+                                        width="100%"
+                                        height="350"
+                                        style="border:0;"
+                                        loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                        allowfullscreen
+                                    ></iframe>
+                                </div>
+                                <a
+                                    href="https://www.google.com/maps/search/?api=1&amp;query=Jeddah%2C%20Saudi%20Arabia"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="map-link"
+                                    data-i18n="contact.mapLink"
+                                >
+                                    <i class="fas fa-map-marked-alt"></i>
+                                    عرض مدينة جدة على خرائط Google
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="social-section">
+                            <h3 data-i18n="contact.socialTitle">تابعنا على مواقع التواصل</h3>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/khald.alrajhy.693594" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.facebook.com/profile.php?id=100075697549136" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.instagram.com/abokhaleed23" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://wa.me/966508777407" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-whatsapp-link>
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
 
                     </div>
 
 
-                    <!-- Social Media -->
+                    <div class="contact-form-wrapper">
 
-                    <div class="social-links">
+                        <div class="form-heading">
+                            <h3 data-i18n="form.title">أرسل طلب شراء</h3>
+                            <p data-i18n="form.description">أدخل بياناتك وتفاصيل الأغراض التي ترغب في بيعها.</p>
+                        </div>
 
-                        <h4>تابعنا على</h4>
+                        <form id="contactForm" class="contact-form" novalidate>
 
-                        <div class="social-icons">
+                            <div class="form-group">
+                                <label for="name" data-i18n="form.nameLabel">الاسم الكامل</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="أدخل اسمك"
+                                    data-ar-placeholder="أدخل اسمك"
+                                    data-en-placeholder="Enter your name"
+                                    autocomplete="name"
+                                    required
+                                    minlength="2"
+                                    maxlength="100"
+                                >
+                            </div>
 
+                            <div class="form-group">
+                                <label for="phone" data-i18n="form.phoneLabel">رقم الهاتف</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="أدخل رقم هاتفك"
+                                    data-ar-placeholder="أدخل رقم هاتفك"
+                                    data-en-placeholder="Enter your phone number"
+                                    autocomplete="tel"
+                                    inputmode="tel"
+                                    maxlength="20"
+                                >
+                            </div>
 
-                            <a
-                                href="https://www.facebook.com/khald.alrajhy.693594"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="social-icon facebook"
-                            >
+                            <div class="form-group">
+                                <label for="city" data-i18n="form.cityLabel">المدينة</label>
+                                <select id="city" name="city">
+                                    <option value="" data-i18n="form.cityPlaceholder">اختر المدينة</option>
+                                    <option value="جدة" data-i18n="cities.jeddah">جدة</option>
+                                    <option value="مكة المكرمة" data-i18n="cities.makkah">مكة المكرمة</option>
+                                    <option value="رابغ" data-i18n="cities.rabigh">رابغ</option>
+                                    <option value="مدينة أخرى" data-i18n="cities.other">مدينة أخرى</option>
+                                </select>
+                            </div>
 
-                                <i class="fab fa-facebook-f"></i>
+                            <div class="form-group">
+                                <label for="category" data-i18n="form.categoryLabel">نوع الأغراض</label>
+                                <select id="category" name="category">
+                                    <option value="" data-i18n="form.categoryPlaceholder">اختر نوع الأغراض</option>
+                                    <option value="مكيف مستعمل" data-i18n="categories.usedAir">مكيف مستعمل</option>
+                                    <option value="مكيف خربان" data-i18n="categories.brokenAir">مكيف خربان</option>
+                                    <option value="سكراب مكيفات" data-i18n="categories.airScrap">سكراب مكيفات</option>
+                                    <option value="كمبروسرات" data-i18n="categories.compressors">كمبروسرات</option>
+                                    <option value="نحاس" data-i18n="categories.copper">نحاس</option>
+                                    <option value="ألمنيوم" data-i18n="categories.aluminum">ألمنيوم</option>
+                                    <option value="حديد وسكراب" data-i18n="categories.iron">حديد وسكراب</option>
+                                    <option value="أجهزة كهربائية" data-i18n="categories.electrical">أجهزة كهربائية</option>
+                                    <option value="معدات مطاعم" data-i18n="categories.restaurant">معدات مطاعم</option>
+                                    <option value="مطابخ مستعملة" data-i18n="categories.kitchens">مطابخ مستعملة</option>
+                                    <option value="أثاث مستعمل" data-i18n="categories.furniture">أثاث مستعمل</option>
+                                    <option value="كيابل وأسلاك" data-i18n="categories.cables">كيابل وأسلاك</option>
+                                    <option value="مكائن ومعدات صناعية" data-i18n="categories.machinery">مكائن ومعدات صناعية</option>
+                                    <option value="سكراب مصانع ومستودعات" data-i18n="categories.factory">سكراب مصانع ومستودعات</option>
+                                    <option value="سكراب هدم ومباني" data-i18n="categories.demolition">سكراب هدم ومباني</option>
+                                    <option value="سكراب مشاريع مقاولات" data-i18n="categories.construction">سكراب مشاريع مقاولات</option>
+                                    <option value="سكراب ورش" data-i18n="categories.workshops">سكراب ورش</option>
+                                    <option value="هياكل ومنتجات معدنية" data-i18n="categories.metal">هياكل ومنتجات معدنية</option>
+                                    <option value="أغراض أخرى" data-i18n="categories.other">أغراض أخرى</option>
+                                </select>
+                            </div>
 
-                                <span class="social-label">
-                                    فيسبوك 1
-                                </span>
+                            <div class="form-group">
+                                <label for="message" data-i18n="form.messageLabel">تفاصيل الطلب</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    placeholder="اكتب تفاصيل الأغراض والكميات والحالة..."
+                                    data-ar-placeholder="اكتب تفاصيل الأغراض والكميات والحالة..."
+                                    data-en-placeholder="Write items details, quantities and condition..."
+                                    required
+                                    minlength="5"
+                                    maxlength="2000"
+                                ></textarea>
+                            </div>
 
-                            </a>
+                            <div class="form-note">
+                                <i class="fas fa-info-circle"></i>
+                                <p data-i18n="form.note">
+                                    بعد الضغط على إرسال، سيتم فتح واتساب. راجع الرسالة وأرسلها بنفسك، ويمكنك إرفاق صور الأغراض داخل المحادثة.
+                                </p>
+                            </div>
 
-
-                            <a
-                                href="https://www.facebook.com/profile.php?id=100075697549136"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="social-icon facebook"
-                            >
-
-                                <i class="fab fa-facebook-f"></i>
-
-                                <span class="social-label">
-                                    فيسبوك 2
-                                </span>
-
-                            </a>
-
-
-                            <a
-                                href="https://www.instagram.com/abokhaleed23"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="social-icon instagram"
-                            >
-
-                                <i class="fab fa-instagram"></i>
-
-                                <span class="social-label">
-                                    انستغرام
-                                </span>
-
-                            </a>
-
-
-                            <a
-                                href="https://wa.me/966508777407"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="social-icon whatsapp"
-                            >
-
+                            <button type="submit" class="btn btn-primary submit-button" id="submitButton">
+                                <span data-i18n="form.submit">إرسال الطلب عبر واتساب</span>
                                 <i class="fab fa-whatsapp"></i>
+                            </button>
 
-                                <span class="social-label">
-                                    واتساب
-                                </span>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Google Maps -->
-
-                    <div class="contact-card map-card">
-
-                        <div class="contact-icon">
-                            <i class="fas fa-map"></i>
-                        </div>
-
-                        <h3>موقعنا على خرائط Google</h3>
-
-                        <a
-                            href="https://maps.app.goo.gl/5m1uN9Q234ATyha17"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="service-btn"
-                        >
-                            عرض موقعنا على الخريطة
-                        </a>
+                        </form>
 
                     </div>
 
                 </div>
 
-
-                <!-- Contact Form -->
-
-                <div class="contact-form-wrapper">
-
-                    <form class="contact-form" id="contactForm">
-
-                        <h3>أرسل طلب شراء</h3>
-
-
-                        <div class="form-group">
-
-                            <label for="name">
-                                الاسم *
-                            </label>
-
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                autocomplete="name"
-                                required
-                                placeholder="أدخل اسمك الكامل"
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="phone">
-                                رقم الهاتف
-                            </label>
-
-                            <input
-                                type="tel"
-                                id="phone"
-                                name="phone"
-                                autocomplete="tel"
-                                inputmode="tel"
-                                placeholder="05XXXXXXXX"
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="city">
-                                المدينة
-                            </label>
-
-                            <select id="city" name="city">
-
-                                <option value="جدة">
-                                    جدة
-                                </option>
-
-                                <option value="مكة">
-                                    مكة
-                                </option>
-
-                                <option value="رابغ">
-                                    رابغ
-                                </option>
-
-                                <option value="مدينة أخرى">
-                                    مدينة أخرى
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="category">
-                                نوع المعروض
-                            </label>
-
-                            <select id="category" name="category">
-
-                                <option value="مكيف مستعمل">
-                                    مكيف مستعمل
-                                </option>
-
-                                <option value="مكيف خربان">
-                                    مكيف خربان
-                                </option>
-
-                                <option value="سكراب مكيفات">
-                                    سكراب مكيفات
-                                </option>
-
-                                <option value="كمبروسرات">
-                                    كمبروسرات
-                                </option>
-
-                                <option value="نحاس">
-                                    نحاس
-                                </option>
-
-                                <option value="ألمنيوم">
-                                    ألمنيوم
-                                </option>
-
-                                <option value="حديد وسكراب">
-                                    حديد وسكراب
-                                </option>
-
-                                <option value="أجهزة كهربائية">
-                                    أجهزة كهربائية
-                                </option>
-
-                                <option value="معدات مطاعم">
-                                    معدات مطاعم
-                                </option>
-
-                                <option value="مطابخ مستعملة">
-                                    مطابخ مستعملة
-                                </option>
-
-                                <option value="أثاث مستعمل">
-                                    أثاث مستعمل
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="message">
-                                تفاصيل المعروض *
-                            </label>
-
-                            <textarea
-                                id="message"
-                                name="message"
-                                required
-                                rows="4"
-                                placeholder="اكتب نوع المكيف أو السكراب وحالته والكمية..."
-                            ></textarea>
-
-                        </div>
-
-
-                        <button type="submit" class="form-submit">
-
-                            <i class="fab fa-whatsapp"></i>
-
-                            <span>
-                                إرسال الطلب عبر واتساب
-                            </span>
-
-                        </button>
-
-
-                        <p class="form-note">
-
-                            بعد فتح واتساب يمكنك إرفاق صور المكيف
-                            أو المعروض وإرسال الرسالة بنفسك.
-
-                        </p>
-
-                    </form>
-
-                </div>
-
             </div>
 
+        </section>
 
-            <!-- Quick Contact -->
-
-            <div class="quick-contact">
-
-                <h3>تواصل سريع</h3>
-
-                <div class="quick-buttons">
-
-
-                    <a
-                        href="tel:+966508777407"
-                        class="quick-btn call"
-                    >
-
-                        <i class="fas fa-phone"></i>
-
-                        <span>
-                            اتصال مباشر
-                        </span>
-
-                    </a>
-
-
-                    <a
-                        href="https://wa.me/966508777407"
-                        class="quick-btn whatsapp"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-
-                        <i class="fab fa-whatsapp"></i>
-
-                        <span>
-                            واتساب
-                        </span>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
+    </main>
 
 
     <!-- ================= FOOTER ================= -->
-
     <footer class="footer">
 
         <div class="container">
 
             <div class="footer-content">
 
-                <div class="footer-logo">
+                <div class="footer-about">
 
-                    <div class="logo">
-
+                    <a href="#home" class="footer-logo">
                         <img
                             src="images/logo.png"
                             alt="شعار أبو خالد"
-                            class="logo-img"
+                            data-ar-alt="شعار أبو خالد"
+                            data-en-alt="Abu Khalid logo"
+                            width="50"
+                            height="50"
                         >
+                        <span>أبو خالد</span>
+                    </a>
 
-                        <div class="logo-text">
-
-                            <h3>أبو خالد</h3>
-
-                            <p>Abu Khalid Scrap</p>
-
-                        </div>
-
-                    </div>
-
-
-                    <p>
-
-                        شراء المكيفات المستعملة والخربانة وسكراب المكيفات
-                        والنحاس والألمنيوم والحديد والأجهزة الكهربائية
-                        ومعدات المطاعم والمطابخ والأثاث المستعمل
-                        في جدة ومكة ورابغ.
-
+                    <p data-i18n="footer.description">
+                        شراء وبيع المكيفات المستعملة والسكراب والألمنيوم والنحاس والحديد والمطابخ والأثاث المستعمل في جميع أحياء جدة ومكة المكرمة ورابغ.
                     </p>
 
                 </div>
 
+                <div class="footer-links">
+                    <h3 data-i18n="footer.quickLinks">روابط سريعة</h3>
+                    <a href="#home" data-i18n="nav.home">الرئيسية</a>
+                    <a href="#services" data-i18n="nav.services">خدماتنا</a>
+                    <a href="#how-it-works" data-i18n="nav.process">طريقة العمل</a>
+                    <a href="#about" data-i18n="nav.about">من نحن</a>
+                    <a href="#faq" data-i18n="nav.faq">الأسئلة الشائعة</a>
+                    <a href="#contact" data-i18n="nav.contact">تواصل معنا</a>
+                </div>
+
+                <div class="footer-contact">
+                    <h3 data-i18n="footer.contactTitle">تواصل معنا</h3>
+                    <a href="tel:+966508777407" dir="ltr">
+                        <i class="fas fa-phone"></i>
+                        +966 50 877 7407
+                    </a>
+                    <a href="tel:+966540925179" dir="ltr">
+                        <i class="fas fa-phone"></i>
+                        +966 54 092 5179
+                    </a>
+                    <a href="https://wa.me/966508777407" target="_blank" rel="noopener noreferrer" data-whatsapp-link>
+                        <i class="fab fa-whatsapp"></i>
+                        <span data-i18n="footer.whatsapp">واتساب</span>
+                    </a>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Jeddah%2C%20Saudi%20Arabia" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span data-i18n="footer.location">مدينة جدة على الخريطة</span>
+                    </a>
+                </div>
+
             </div>
 
-
             <div class="footer-bottom">
-
                 <p>
-
-                    &copy; 2026 أبو خالد.
-                    جميع الحقوق محفوظة.
-
+                    © <span id="currentYear">2025</span>
+                    <span data-i18n="footer.copyright">أبو خالد. جميع الحقوق محفوظة.</span>
                 </p>
-
+                <a href="#home" class="back-to-top" aria-label="العودة إلى الأعلى">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
             </div>
 
         </div>
@@ -1398,38 +1370,22 @@
     </footer>
 
 
-    <!-- ================= PROGRESS BAR ================= -->
-
-    <div
-        class="progress-bar"
-        id="progressBar"
-    ></div>
-
-
-    <!-- ================= FLOATING WHATSAPP ================= -->
-
+    <!-- Floating WhatsApp -->
     <a
         href="https://wa.me/966508777407"
         class="floating-whatsapp"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="تواصل معنا عبر واتساب"
+        aria-label="تواصل عبر واتساب"
+        data-whatsapp-link
     >
-
         <i class="fab fa-whatsapp"></i>
-
     </a>
 
 
-    <!-- ================= TOAST ================= -->
-
-    <div id="toastContainer"></div>
-
-
-    <!-- ================= JAVASCRIPT ================= -->
+    <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
 
     <script src="script.js" defer></script>
 
 </body>
-
 </html>
