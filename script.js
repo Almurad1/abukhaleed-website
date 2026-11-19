@@ -1,4 +1,3 @@
-
 "use strict";
 
 /* =========================================================
@@ -6,39 +5,42 @@
 ========================================================= */
 
 const CONFIG = Object.freeze({
-    phoneNumbers: [
+
+    phoneNumbers: Object.freeze([
         "+966508777407",
         "+966540925179"
-    ],
+    ]),
 
     whatsappNumber: "966508777407",
 
-    socialMedia: {
+    socialMedia: Object.freeze({
         facebook1: "https://www.facebook.com/khald.alrajhy.693594",
         facebook2: "https://www.facebook.com/profile.php?id=100075697549136",
         instagram: "https://www.instagram.com/abokhaleed23"
-    },
+    }),
 
-    workingHours: {
-        start: "07:00",
-        end: "24:00"
-    },
+    workingHours: Object.freeze({
+        start: 7,
+        end: 24
+    }),
 
     toastDuration: 3000,
+    toastAnimationDuration: 300,
     mobileBreakpoint: 768,
     scrollThreshold: 100,
+    formResetDelay: 1200,
 
-    translations: {
-        ar: {
+    translations: Object.freeze({
+
+        ar: Object.freeze({
+
             name: "الاسم *",
-            email: "البريد الإلكتروني",
             phone: "رقم الهاتف",
             city: "المدينة",
             category: "نوع الخدمة",
             message: "تفاصيل الطلب *",
 
             namePlaceholder: "أدخل اسمك الكامل",
-            emailPlaceholder: "example@email.com",
             phonePlaceholder: "+966 5X XXX XXXX",
             cityPlaceholder: "اختر مدينتك",
             messagePlaceholder: "اكتب تفاصيل طلبك هنا...",
@@ -49,27 +51,55 @@ const CONFIG = Object.freeze({
             requiredName: "الرجاء إدخال الاسم الكامل",
             requiredMessage: "الرجاء كتابة تفاصيل الطلب",
 
-            whatsappOpened: "تم فتح واتساب. اضغط إرسال لإتمام طلبك.",
-            popupBlocked: "تعذر فتح واتساب. يرجى السماح بالنوافذ المنبثقة.",
+            whatsappOpened:
+                "تم تجهيز رابط واتساب. راجع الرسالة واضغط إرسال لإتمام طلبك. يمكنك إرفاق الصور يدويًا.",
+
+            popupBlocked:
+                "تعذر فتح واتساب. يرجى السماح بفتح الروابط الخارجية أو فتح واتساب يدويًا.",
+
             generalError: "حدث خطأ. يرجى المحاولة مرة أخرى.",
+            processing: "جاري تجهيز رسالتك، يرجى الانتظار...",
 
             themeDark: "تم تفعيل الوضع الليلي 🌙",
             themeLight: "تم تفعيل الوضع النهاري ☀️",
 
             languageArabic: "تم التبديل إلى العربية 🇸🇦",
-            languageEnglish: "Switched to English 🇬🇧"
-        },
+            languageEnglish: "تم التبديل إلى الإنجليزية 🇬🇧",
 
-        en: {
+            darkModeLabel: "تفعيل الوضع الليلي",
+            lightModeLabel: "تفعيل الوضع النهاري",
+
+            openMenu: "فتح القائمة",
+            closeMenu: "إغلاق القائمة",
+
+            notProvided: "غير محدد",
+            notSpecified: "غير محددة",
+
+            openNow: "مفتوح الآن",
+            closedNow: "مغلق حالياً",
+
+            // ✅ إزالة "حراج"
+            whatsappGreeting: "مرحباً، أرغب في التواصل مع أبو خالد.",
+            customerInformation: "بيانات العميل:",
+            requestDetails: "تفاصيل الطلب:",
+
+            nameLabel: "الاسم:",
+            phoneLabel: "رقم الهاتف:",
+            cityLabel: "المدينة:",
+            serviceLabel: "نوع الخدمة:",
+
+            whatsappClosing: "يرجى التواصل معي بخصوص الطلب. شكراً لكم."
+        }),
+
+        en: Object.freeze({
+
             name: "Name *",
-            email: "Email",
             phone: "Phone Number",
             city: "City",
             category: "Service Type",
             message: "Request Details *",
 
             namePlaceholder: "Enter your full name",
-            emailPlaceholder: "example@email.com",
             phonePlaceholder: "+966 5X XXX XXXX",
             cityPlaceholder: "Select your city",
             messagePlaceholder: "Write your request details...",
@@ -80,48 +110,133 @@ const CONFIG = Object.freeze({
             requiredName: "Please enter your full name",
             requiredMessage: "Please enter your request details",
 
-            whatsappOpened: "WhatsApp opened. Press Send to complete your request.",
-            popupBlocked: "Unable to open WhatsApp. Please allow popups.",
+            whatsappOpened:
+                "WhatsApp link prepared. Review the message and press Send to complete your request. You can attach images manually.",
+
+            popupBlocked:
+                "Unable to open WhatsApp. Please allow external links or open WhatsApp manually.",
+
             generalError: "Something went wrong. Please try again.",
+            processing: "Preparing your message. Please wait...",
 
             themeDark: "Dark mode enabled 🌙",
             themeLight: "Light mode enabled ☀️",
 
             languageArabic: "Switched to Arabic 🇸🇦",
-            languageEnglish: "Switched to English 🇬🇧"
-        }
-    },
+            languageEnglish: "Switched to English 🇬🇧",
 
-    services: [
-        "شراء مكيفات مستعملة",
-        "شراء مكيفات خربانة",
-        "شراء مكيفات سكراب وكمبروسرات",
-        "شراء نحاس المكيفات والنحاس الخردة",
-        "شراء الألمنيوم وسكرابه",
-        "شراء الحديد والسكراب والمعادن",
-        "شراء الأجهزة الكهربائية",
-        "شراء معدات المطاعم",
-        "شراء المطابخ المستعملة",
-        "شراء الأثاث المستعمل"
-    ],
+            darkModeLabel: "Enable dark mode",
+            lightModeLabel: "Enable light mode",
 
-    cities: [
-        "جدة",
-        "مكة",
-        "رابغ"
-    ]
+            openMenu: "Open navigation menu",
+            closeMenu: "Close navigation menu",
+
+            notProvided: "Not provided",
+            notSpecified: "Not specified",
+
+            openNow: "Open now",
+            closedNow: "Closed now",
+
+            whatsappGreeting: "Hello, I would like to contact Abu Khalid.",
+            customerInformation: "Customer Information:",
+            requestDetails: "Request Details:",
+
+            nameLabel: "Name:",
+            phoneLabel: "Phone:",
+            cityLabel: "City:",
+            serviceLabel: "Service Type:",
+
+            whatsappClosing: "Please contact me regarding this request. Thank you."
+        })
+    }),
+
+    cityTranslations: Object.freeze({
+        "جدة": "Jeddah",
+        "مكة": "Makkah",
+        "مكة المكرمة": "Makkah",
+        "رابغ": "Rabigh",
+        "مدينة أخرى": "Other City"
+    }),
+
+    serviceTranslations: Object.freeze({
+        "مكيف مستعمل": "Used Air Conditioner",
+        "مكيف خربان": "Broken Air Conditioner",
+        "سكراب مكيفات": "AC Scrap",
+        "كمبروسرات": "Compressors",
+        "نحاس": "Copper",
+        "ألمنيوم": "Aluminum",
+        "حديد وسكراب": "Iron and Scrap Metal",
+        "أجهزة كهربائية": "Electrical Appliances",
+        "معدات مطاعم": "Restaurant Equipment",
+        "مطابخ مستعملة": "Used Kitchens",
+        "أثاث مستعمل": "Used Furniture",
+        "كيابل وأسلاك": "Cables and Wires",
+        "مكائن ومعدات صناعية": "Industrial Machinery and Equipment",
+        "سكراب مصانع ومستودعات": "Factory and Warehouse Scrap",
+        "سكراب هدم ومباني": "Demolition and Building Scrap",
+        "سكراب مشاريع مقاولات": "Construction Project Scrap",
+        "سكراب ورش": "Workshop Scrap",
+        "هياكل ومنتجات معدنية": "Metal Structures and Products",
+        "أغراض أخرى": "Other Items"
+    })
 });
 
 
 /* =========================================================
-   2. SAFE STORAGE MANAGER
+   2. GENERAL UTILITIES
+========================================================= */
+
+const Utils = Object.freeze({
+
+    getElement(id) {
+        return document.getElementById(id);
+    },
+
+    isElement(value) {
+        return value instanceof Element;
+    },
+
+    normalizeText(value) {
+        return String(value ?? "").trim();
+    },
+
+    prefersReducedMotion() {
+        return window.matchMedia &&
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    },
+
+    ready(callback) {
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", callback, { once: true });
+        } else {
+            callback();
+        }
+    },
+
+    queryFirst(selectors, parent = document) {
+        for (const selector of selectors) {
+            const element = parent.querySelector(selector);
+            if (element) return element;
+        }
+        return null;
+    },
+
+    encode(value) {
+        return encodeURIComponent(String(value ?? ""));
+    }
+});
+
+
+/* =========================================================
+   3. SAFE STORAGE MANAGER
 ========================================================= */
 
 class StorageManager {
 
-    static get(key, defaultValue) {
+    static get(key, defaultValue = null) {
         try {
-            return localStorage.getItem(key) || defaultValue;
+            const value = window.localStorage.getItem(key);
+            return value !== null ? value : defaultValue;
         } catch (error) {
             console.warn("Storage read error:", error);
             return defaultValue;
@@ -130,34 +245,47 @@ class StorageManager {
 
     static set(key, value) {
         try {
-            localStorage.setItem(key, value);
+            window.localStorage.setItem(key, String(value));
+            return true;
         } catch (error) {
             console.warn("Storage write error:", error);
+            return false;
+        }
+    }
+
+    static remove(key) {
+        try {
+            window.localStorage.removeItem(key);
+            return true;
+        } catch (error) {
+            console.warn("Storage remove error:", error);
+            return false;
         }
     }
 }
 
 
 /* =========================================================
-   3. TOAST NOTIFICATION MANAGER
+   4. TOAST NOTIFICATION MANAGER
 ========================================================= */
 
 class ToastManager {
 
     static show(message, type = "success") {
 
-        const container = document.getElementById("toastContainer");
+        let container = Utils.getElement("toastContainer");
 
         if (!container) {
-            console.warn("Toast container not found.");
-            return;
+            container = document.createElement("div");
+            container.id = "toastContainer";
+            container.className = "toast-container";
+            container.setAttribute("aria-live", "polite");
+            container.setAttribute("aria-atomic", "true");
+            document.body.appendChild(container);
         }
 
         const allowedTypes = ["success", "error", "info"];
-
-        const toastType = allowedTypes.includes(type)
-            ? type
-            : "info";
+        const toastType = allowedTypes.includes(type) ? type : "info";
 
         const icons = {
             success: "fa-check-circle",
@@ -166,159 +294,223 @@ class ToastManager {
         };
 
         const toast = document.createElement("div");
-
         toast.className = `toast toast-${toastType}`;
         toast.setAttribute("role", "status");
-        toast.setAttribute("aria-live", "polite");
 
         const icon = document.createElement("i");
-
         icon.className = `fas ${icons[toastType]}`;
         icon.setAttribute("aria-hidden", "true");
 
         const text = document.createElement("span");
-
-        // Prevent unsafe HTML injection.
         text.textContent = String(message);
 
         toast.append(icon, text);
-
         container.appendChild(toast);
 
-        window.setTimeout(() => {
-
+        const removeToast = () => {
+            if (!toast.isConnected) return;
             toast.classList.add("toast-removing");
-
             window.setTimeout(() => {
                 toast.remove();
-            }, 300);
+            }, CONFIG.toastAnimationDuration);
+        };
 
-        }, CONFIG.toastDuration);
+        window.setTimeout(removeToast, CONFIG.toastDuration);
+
+        return toast;
     }
 }
 
 
 /* =========================================================
-   4. MAIN WEBSITE MANAGER
+   5. MAIN WEBSITE MANAGER
 ========================================================= */
 
 class WebsiteManager {
 
     constructor() {
 
-        this.currentLanguage = StorageManager.get(
-            "language",
-            "ar"
-        );
+        const savedLanguage = StorageManager.get("language", "ar");
+        const savedTheme = StorageManager.get("theme", "light");
 
-        this.currentTheme = StorageManager.get(
-            "theme",
-            "light"
-        );
+        this.currentLanguage = savedLanguage === "en" ? "en" : "ar";
+        this.currentTheme = savedTheme === "dark" ? "dark" : "light";
 
-        this.formSubmitted = false;
+        this.formProcessing = false;
         this.scrollScheduled = false;
 
         this.mobileMenu = null;
         this.mobileToggle = null;
+        this.mobileMenuCreated = false;
+
+        this.form = null;
+        this.submitButton = null;
+        this.formTimeout = null;
+
+        this.scrollObserver = null;
+        this.initialized = false;
 
         this.init();
     }
 
 
-    /* -----------------------------------------------------
-       INITIALIZATION
-    ----------------------------------------------------- */
+    /* =====================================================
+       5.1 APPLICATION INITIALIZATION
+    ===================================================== */
 
     init() {
 
-        this.setupEventListeners();
+        if (this.initialized) return;
+        this.initialized = true;
 
         this.applyLanguage(this.currentLanguage);
         this.applyTheme(this.currentTheme);
 
+        this.setupWhatsAppLinks();
+        this.setupOpenStatus();
+
         this.setupMobileMenu();
         this.setupContactForm();
-
         this.setupSmoothScrolling();
         this.setupScrollEffects();
-
         this.setupProgressBar();
         this.updateHeaderOnScroll();
-
         this.setupExternalLinks();
+        this.setupEventListeners();
+        this.setupSEO();
+
+        console.info("Abu Khalid Website initialized successfully.");
     }
 
 
     /* =====================================================
-       5. EVENT LISTENERS
+       5.2 WHATSAPP LINKS SYNC
+    ===================================================== */
+
+    setupWhatsAppLinks() {
+
+        const links = document.querySelectorAll("[data-whatsapp-link]");
+
+        links.forEach((link) => {
+
+            const href = link.getAttribute("href") || "";
+            const hasText = href.includes("?text=");
+
+            if (hasText) {
+                link.href = href.replace(
+                    /wa\.me\/\d+/,
+                    `wa.me/${CONFIG.whatsappNumber}`
+                );
+            } else {
+                link.href = `https://wa.me/${CONFIG.whatsappNumber}`;
+            }
+        });
+
+        console.info(`WhatsApp links synced: ${links.length}`);
+    }
+
+
+    /* =====================================================
+       5.3 OPEN STATUS
+    ===================================================== */
+
+    isOpenNow() {
+
+        const now = new Date();
+        const hour = now.getHours();
+        const { start, end } = CONFIG.workingHours;
+
+        if (end === 24) {
+            return hour >= start && hour <= 23;
+        }
+
+        return hour >= start && hour < end;
+    }
+
+    setupOpenStatus() {
+
+        const badge = document.querySelector(".hero-badge");
+        if (!badge) return;
+
+        if (badge.querySelector(".open-status")) return;
+
+        const isOpen = this.isOpenNow();
+        const translations = CONFIG.translations[this.currentLanguage];
+
+        const statusEl = document.createElement("span");
+        statusEl.className = "open-status";
+        statusEl.style.cssText =
+            "margin-inline-start:8px;font-size:11px;opacity:0.9;font-weight:700;";
+
+        const dot = document.createElement("i");
+        dot.className = "fas fa-circle";
+        dot.style.cssText = `font-size:7px;margin-inline-end:5px;color:${isOpen ? "#22c55e" : "#ef4444"};`;
+        dot.setAttribute("aria-hidden", "true");
+
+        const text = document.createTextNode(
+            isOpen ? translations.openNow : translations.closedNow
+        );
+
+        statusEl.append(dot, text);
+        badge.appendChild(statusEl);
+    }
+
+
+    /* =====================================================
+       6. EVENT LISTENERS
     ===================================================== */
 
     setupEventListeners() {
 
-        const themeToggle = document.getElementById("themeToggle");
-        const langToggle = document.getElementById("langToggle");
-        const mobileToggle = document.getElementById("mobileToggle");
+        const themeToggle = Utils.getElement("themeToggle");
+        const langToggle = Utils.getElement("langToggle");
+
+        this.mobileToggle = Utils.getElement("mobileToggle");
 
         if (themeToggle) {
-            themeToggle.addEventListener("click", () => {
-                this.toggleTheme();
-            });
+            themeToggle.addEventListener("click", () => this.toggleTheme());
         }
 
         if (langToggle) {
-            langToggle.addEventListener("click", () => {
-                this.toggleLanguage();
-            });
+            langToggle.addEventListener("click", () => this.toggleLanguage());
         }
 
-        if (mobileToggle) {
-            mobileToggle.addEventListener("click", () => {
-                this.toggleMobileMenu();
-            });
+        if (this.mobileToggle) {
+            this.mobileToggle.addEventListener("click", () => this.toggleMobileMenu());
         }
 
-        // Optimized scroll handling.
-        window.addEventListener(
-            "scroll",
-            () => {
+        window.addEventListener("scroll", () => {
 
-                if (this.scrollScheduled) return;
+            if (this.scrollScheduled) return;
 
-                this.scrollScheduled = true;
+            this.scrollScheduled = true;
 
-                window.requestAnimationFrame(() => {
+            window.requestAnimationFrame(() => {
+                this.updateProgressBar();
+                this.updateHeaderOnScroll();
+                this.scrollScheduled = false;
+            });
 
-                    this.updateProgressBar();
-                    this.updateHeaderOnScroll();
+        }, { passive: true });
 
-                    this.scrollScheduled = false;
-                });
+        window.addEventListener("resize", () => this.handleResize(), { passive: true });
 
-            },
-            { passive: true }
-        );
-
-        window.addEventListener("resize", () => {
-            this.handleResize();
-        });
-
-        // Close mobile menu when clicking outside.
         document.addEventListener("click", (event) => {
 
             if (!this.mobileMenu || !this.mobileToggle) return;
 
-            const insideMenu = this.mobileMenu.contains(event.target);
-            const insideToggle = this.mobileToggle.contains(event.target);
+            const target = event.target;
+            if (!Utils.isElement(target)) return;
+
+            const insideMenu = this.mobileMenu.contains(target);
+            const insideToggle = this.mobileToggle.contains(target);
 
             if (!insideMenu && !insideToggle) {
                 this.closeMobileMenu();
             }
         });
 
-        // Close mobile menu using Escape.
         document.addEventListener("keydown", (event) => {
-
             if (event.key === "Escape") {
                 this.closeMobileMenu();
             }
@@ -327,472 +519,531 @@ class WebsiteManager {
 
 
     /* =====================================================
-       6. THEME MANAGEMENT
+       7. THEME MANAGEMENT
     ===================================================== */
 
     toggleTheme() {
 
-        this.currentTheme =
-            this.currentTheme === "light"
-                ? "dark"
-                : "light";
+        const nextTheme = this.currentTheme === "light" ? "dark" : "light";
 
+        this.applyTheme(nextTheme);
+        StorageManager.set("theme", nextTheme);
+
+        const t = CONFIG.translations[this.currentLanguage];
+        const message = nextTheme === "dark" ? t.themeDark : t.themeLight;
+
+        ToastManager.show(message, "info");
+    }
+
+    applyTheme(theme) {
+
+        const selectedTheme = theme === "dark" ? "dark" : "light";
+        this.currentTheme = selectedTheme;
+
+        document.documentElement.setAttribute("data-theme", selectedTheme);
+
+        const themeToggle = Utils.getElement("themeToggle");
+        if (!themeToggle) return;
+
+        const themeIcon = themeToggle.querySelector("i");
+        if (themeIcon) {
+            themeIcon.className = selectedTheme === "light" ? "fas fa-moon" : "fas fa-sun";
+        }
+
+        const t = CONFIG.translations[this.currentLanguage];
+        const label = selectedTheme === "dark" ? t.lightModeLabel : t.darkModeLabel;
+
+        themeToggle.setAttribute("aria-label", label);
+        themeToggle.setAttribute("title", label);
+        themeToggle.setAttribute("aria-pressed", String(selectedTheme === "dark"));
+    }
+
+
+    /* =====================================================
+       8. LANGUAGE MANAGEMENT
+    ===================================================== */
+
+    toggleLanguage() {
+
+        const nextLanguage = this.currentLanguage === "ar" ? "en" : "ar";
+
+        this.applyLanguage(nextLanguage);
+        StorageManager.set("language", nextLanguage);
+
+        const t = CONFIG.translations[nextLanguage];
+        const message = nextLanguage === "ar" ? t.languageArabic : t.languageEnglish;
+
+        ToastManager.show(message, "info");
+    }
+
+    applyLanguage(language) {
+
+        const lang = language === "en" ? "en" : "ar";
+        this.currentLanguage = lang;
+
+        const root = document.documentElement;
+        root.lang = lang;
+        root.dir = lang === "ar" ? "rtl" : "ltr";
+        root.setAttribute("data-language", lang);
+
+        this.translateElements(lang);
+        this.updateFormLabels(lang);
+        this.updateLanguageButton(lang);
         this.applyTheme(this.currentTheme);
+        this.updateMobileMenuLanguage();
+        this.updateSEO();
+        this.refreshOpenStatus();
+    }
 
-        StorageManager.set("theme", this.currentTheme);
+    refreshOpenStatus() {
 
-        const translations = CONFIG.translations[this.currentLanguage];
+        const badge = document.querySelector(".hero-badge");
+        if (!badge) return;
 
-        ToastManager.show(
-            this.currentTheme === "dark"
-                ? translations.themeDark
-                : translations.themeLight,
-            "info"
+        const existing = badge.querySelector(".open-status");
+        if (existing) existing.remove();
+
+        this.setupOpenStatus();
+    }
+
+    updateLanguageButton(language) {
+
+        const button = Utils.getElement("langToggle");
+        if (!button) return;
+
+        button.textContent = language === "ar" ? "EN" : "ع";
+
+        button.setAttribute(
+            "aria-label",
+            language === "ar" ? "Switch to English" : "التبديل إلى العربية"
+        );
+        button.setAttribute(
+            "title",
+            language === "ar" ? "Switch to English" : "التبديل إلى العربية"
         );
     }
 
 
-    applyTheme(theme) {
+    /* =====================================================
+       8.1 PAGE ELEMENT TRANSLATION
+    ===================================================== */
 
-        const selectedTheme =
-            theme === "dark" ? "dark" : "light";
+    translateElements(language) {
 
-        this.currentTheme = selectedTheme;
+        const elements = document.querySelectorAll("[data-ar][data-en]");
 
-        document.documentElement.setAttribute(
-            "data-theme",
-            selectedTheme
-        );
+        elements.forEach((element) => {
 
-        const themeToggle = document.getElementById("themeToggle");
+            const translation = element.getAttribute(`data-${language}`);
+            if (translation === null) return;
 
-        const themeIcon = themeToggle
-            ? themeToggle.querySelector("i")
-            : null;
+            const tag = element.tagName;
 
-        if (themeIcon) {
+            if (tag === "OPTION") {
+                element.textContent = translation;
+                return;
+            }
 
-            themeIcon.className =
-                selectedTheme === "light"
-                    ? "fas fa-moon"
-                    : "fas fa-sun";
+            if (tag === "INPUT" || tag === "TEXTAREA") {
+                if (element.hasAttribute("placeholder")) {
+                    element.placeholder = translation;
+                }
+                return;
+            }
+
+            if (tag === "SELECT") return;
+
+            if (
+                element.id === "themeToggle" ||
+                element.id === "langToggle" ||
+                element.id === "mobileToggle"
+            ) {
+                return;
+            }
+
+            this.replaceTextPreservingChildren(element, translation);
+        });
+
+        this.translateAttributes(language);
+    }
+
+    replaceTextPreservingChildren(element, translation) {
+
+        if (!element) return;
+
+        const textNodes = Array.from(element.childNodes).filter((node) => {
+            return (
+                node.nodeType === Node.TEXT_NODE &&
+                node.textContent.trim() !== ""
+            );
+        });
+
+        if (textNodes.length > 0) {
+            textNodes[0].textContent = translation;
+            textNodes.slice(1).forEach((node) => node.remove());
+            return;
         }
 
-        if (themeToggle) {
-
-            const label = selectedTheme === "dark"
-                ? "تفعيل الوضع النهاري"
-                : "تفعيل الوضع الليلي";
-
-            themeToggle.setAttribute("aria-label", label);
-            themeToggle.setAttribute("title", label);
+        if (element.children.length === 0) {
+            element.textContent = translation;
         }
     }
 
 
     /* =====================================================
-       7. LANGUAGE MANAGEMENT
+       8.2 ATTRIBUTE TRANSLATION
     ===================================================== */
 
-    toggleLanguage() {
+    translateAttributes(language) {
 
-        this.currentLanguage =
-            this.currentLanguage === "ar"
-                ? "en"
-                : "ar";
+        const mapping = [
+            { suffix: "alt",         selector: "[data-ar-alt][data-en-alt]" },
+            { suffix: "aria-label",  selector: "[data-ar-aria-label][data-en-aria-label]" },
+            { suffix: "title",       selector: "[data-ar-title][data-en-title]" },
+            { suffix: "placeholder", selector: "[data-ar-placeholder][data-en-placeholder]" }
+        ];
 
-        this.applyLanguage(this.currentLanguage);
+        mapping.forEach(({ suffix, selector }) => {
 
-        StorageManager.set(
-            "language",
-            this.currentLanguage
-        );
+            document.querySelectorAll(selector).forEach((el) => {
 
-        const translations = CONFIG.translations[this.currentLanguage];
+                const value = el.getAttribute(`data-${language}-${suffix}`);
 
-        ToastManager.show(
-            this.currentLanguage === "ar"
-                ? translations.languageArabic
-                : translations.languageEnglish,
-            "info"
-        );
-    }
-
-
-    applyLanguage(language) {
-
-        const lang = language === "en" ? "en" : "ar";
-
-        this.currentLanguage = lang;
-
-        document.documentElement.lang = lang;
-
-        document.documentElement.dir =
-            lang === "ar" ? "rtl" : "ltr";
-
-        // Update language button.
-        const langButton = document.querySelector(
-            "#langToggle span"
-        );
-
-        if (langButton) {
-            langButton.textContent = lang === "ar" ? "EN" : "ع";
-        }
-
-        // Translate static elements.
-        this.translateElements(lang);
-
-        // Update form fields.
-        this.updateFormLabels(lang);
-    }
-
-
-    translateElements(language) {
-
-        const elements = document.querySelectorAll(
-            "[data-ar][data-en]"
-        );
-
-        elements.forEach((element) => {
-
-            const translation = element.getAttribute(
-                `data-${language}`
-            );
-
-            if (translation === null) return;
-
-            const tag = element.tagName;
-
-            if (
-                tag === "INPUT" ||
-                tag === "TEXTAREA" ||
-                tag === "SELECT"
-            ) {
-                element.placeholder = translation;
-                return;
-            }
-
-            // Preserve icons and nested elements.
-            const textNode = Array.from(element.childNodes).find(
-                (node) =>
-                    node.nodeType === Node.TEXT_NODE &&
-                    node.textContent.trim() !== ""
-            );
-
-            if (textNode) {
-                textNode.textContent = translation;
-            } else if (element.children.length === 0) {
-                element.textContent = translation;
-            }
+                if (value !== null) {
+                    el.setAttribute(suffix, value);
+                }
+            });
         });
     }
 
 
+    /* =====================================================
+       8.3 FORM TRANSLATIONS
+    ===================================================== */
+
     updateFormLabels(language) {
 
-        const translations = CONFIG.translations[language];
+        const t = CONFIG.translations[language];
 
         const fields = {
-            name: translations.name,
-            email: translations.email,
-            phone: translations.phone,
-            city: translations.city,
-            category: translations.category,
-            message: translations.message
+            name: t.name,
+            phone: t.phone,
+            city: t.city,
+            category: t.category,
+            message: t.message
         };
 
         Object.entries(fields).forEach(([id, text]) => {
 
-            const label = document.querySelector(
-                `label[for="${id}"]`
-            );
+            const label = document.querySelector(`label[for="${id}"]`);
+            if (!label) return;
 
-            if (label) {
-                label.textContent = text;
-            }
+            if (label.hasAttribute("data-ar") && label.hasAttribute("data-en")) return;
+
+            this.replaceTextPreservingChildren(label, text);
         });
 
         const placeholders = {
-            name: translations.namePlaceholder,
-            email: translations.emailPlaceholder,
-            phone: translations.phonePlaceholder,
-            city: translations.cityPlaceholder,
-            message: translations.messagePlaceholder
+            name: t.namePlaceholder,
+            phone: t.phonePlaceholder,
+            city: t.cityPlaceholder,
+            message: t.messagePlaceholder
         };
 
         Object.entries(placeholders).forEach(([id, text]) => {
 
-            const field = document.getElementById(id);
-
-            if (field) {
-                field.placeholder = text;
-            }
+            const field = Utils.getElement(id);
+            if (field) field.placeholder = text;
         });
 
+        this.translateSelectOptions(language);
         this.updateSubmitButtonLanguage(language);
     }
 
 
+    /* =====================================================
+       8.4 SELECT OPTIONS TRANSLATION
+    ===================================================== */
+
+    translateSelectOptions(language) {
+
+        const selects = document.querySelectorAll("#city, #category");
+
+        selects.forEach((select) => {
+
+            Array.from(select.options).forEach((option) => {
+
+                if (option.hasAttribute("data-ar") && option.hasAttribute("data-en")) {
+                    const value = option.getAttribute(`data-${language}`);
+                    if (value !== null) option.textContent = value;
+                    return;
+                }
+
+                if (!option.hasAttribute("data-original-ar")) {
+                    option.setAttribute("data-original-ar", option.textContent.trim());
+                }
+
+                const originalArabic = option.getAttribute("data-original-ar");
+                if (!originalArabic) return;
+
+                if (language === "ar") {
+                    option.textContent = originalArabic;
+                    return;
+                }
+
+                if (select.id === "city") {
+                    option.textContent =
+                        CONFIG.cityTranslations[originalArabic] || originalArabic;
+                    return;
+                }
+
+                if (select.id === "category") {
+                    option.textContent =
+                        CONFIG.serviceTranslations[originalArabic] || originalArabic;
+                }
+            });
+        });
+    }
+
+
+    /* =====================================================
+       8.5 SUBMIT BUTTON TRANSLATION
+    ===================================================== */
+
+    getSubmitButton(form = null) {
+
+        const parent = form || Utils.getElement("contactForm");
+        if (!parent) return null;
+
+        return Utils.queryFirst(
+            [".form-submit", ".submit-button", 'button[type="submit"]', 'input[type="submit"]'],
+            parent
+        );
+    }
+
     updateSubmitButtonLanguage(language) {
 
-        const button = document.querySelector(
-            "#contactForm .form-submit"
-        );
+        const button = this.getSubmitButton();
+        if (!button || this.formProcessing) return;
 
-        if (!button || this.formSubmitted) return;
+        const t = CONFIG.translations[language];
 
-        const translations = CONFIG.translations[language];
+        if (button.tagName === "INPUT") {
+            button.value = t.submitButton;
+            return;
+        }
 
         const icon = button.querySelector("i");
 
         button.textContent = "";
 
-        if (icon) {
-            button.appendChild(icon);
-        }
+        if (icon) button.appendChild(icon);
 
-        button.appendChild(
-            document.createTextNode(
-                ` ${translations.submitButton}`
-            )
-        );
+        button.appendChild(document.createTextNode(` ${t.submitButton}`));
     }
 
 
     /* =====================================================
-       8. MOBILE NAVIGATION
+       9. MOBILE NAVIGATION
     ===================================================== */
 
     setupMobileMenu() {
 
         const nav = document.querySelector(".nav");
+        const headerContainer = Utils.queryFirst([
+            ".header .container",
+            ".header-container",
+            ".header"
+        ]);
 
-        const headerContainer = document.querySelector(
-            ".header .container"
-        );
+        this.mobileToggle = Utils.getElement("mobileToggle");
 
-        this.mobileToggle = document.getElementById(
-            "mobileToggle"
-        );
+        if (!nav || !headerContainer) {
+            console.warn("Mobile navigation elements were not found.");
+            return;
+        }
 
-        if (!nav || !headerContainer) return;
-
-        const existingMenu = document.querySelector(
-            ".mobile-menu"
-        );
+        let existingMenu = document.querySelector(".mobile-menu");
 
         if (existingMenu) {
-
             this.mobileMenu = existingMenu;
 
+            if (!existingMenu.querySelector("a") && nav.querySelector("a")) {
+                const clonedNav = nav.cloneNode(true);
+                clonedNav.removeAttribute("id");
+                existingMenu.appendChild(clonedNav);
+            }
         } else {
-
             const menu = document.createElement("div");
-
             menu.className = "mobile-menu";
             menu.id = "mobileMenu";
 
             const clonedNav = nav.cloneNode(true);
-
             clonedNav.removeAttribute("id");
-
             menu.appendChild(clonedNav);
 
-            const phoneButton = document.querySelector(
-                ".phone-btn"
-            );
-
+            const phoneButton = document.querySelector(".header-phone");
             if (phoneButton) {
                 menu.appendChild(phoneButton.cloneNode(true));
             }
 
             headerContainer.appendChild(menu);
-
             this.mobileMenu = menu;
+            this.mobileMenuCreated = true;
         }
 
-        this.mobileMenu.id = "mobileMenu";
+        if (!this.mobileMenu.id) this.mobileMenu.id = "mobileMenu";
 
         if (this.mobileToggle) {
-
-            this.mobileToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            this.mobileToggle.setAttribute(
-                "aria-controls",
-                "mobileMenu"
-            );
+            this.mobileToggle.setAttribute("aria-expanded", "false");
+            this.mobileToggle.setAttribute("aria-controls", this.mobileMenu.id);
+            this.mobileToggle.setAttribute("aria-haspopup", "true");
         }
 
-        // Event delegation for cloned links.
         this.mobileMenu.addEventListener("click", (event) => {
+            const target = event.target;
+            if (!Utils.isElement(target)) return;
 
-            const link = event.target.closest("a");
-
-            if (link) {
-                this.closeMobileMenu();
-            }
+            const link = target.closest("a");
+            if (link) this.closeMobileMenu();
         });
+
+        this.updateMobileMenuLanguage();
     }
 
+    updateMobileMenuLanguage() {
+
+        if (!this.mobileToggle) return;
+
+        const t = CONFIG.translations[this.currentLanguage];
+        const isOpen = this.mobileMenu && this.mobileMenu.classList.contains("active");
+
+        const label = isOpen ? t.closeMenu : t.openMenu;
+
+        this.mobileToggle.setAttribute("aria-label", label);
+        this.mobileToggle.setAttribute("title", label);
+    }
 
     toggleMobileMenu() {
-
         if (!this.mobileMenu || !this.mobileToggle) return;
 
         const isOpen = this.mobileMenu.classList.contains("active");
-
-        if (isOpen) {
-            this.closeMobileMenu();
-        } else {
-            this.openMobileMenu();
-        }
+        isOpen ? this.closeMobileMenu() : this.openMobileMenu();
     }
 
-
     openMobileMenu() {
-
         if (!this.mobileMenu || !this.mobileToggle) return;
 
         this.mobileMenu.classList.add("active");
         this.mobileToggle.classList.add("active");
-
-        this.mobileToggle.setAttribute(
-            "aria-expanded",
-            "true"
-        );
+        this.mobileToggle.setAttribute("aria-expanded", "true");
+        this.updateMobileMenuLanguage();
     }
 
-
     closeMobileMenu() {
-
         if (!this.mobileMenu || !this.mobileToggle) return;
 
         this.mobileMenu.classList.remove("active");
         this.mobileToggle.classList.remove("active");
-
-        this.mobileToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
+        this.mobileToggle.setAttribute("aria-expanded", "false");
+        this.updateMobileMenuLanguage();
     }
 
 
     /* =====================================================
-       9. CONTACT FORM
+       10. CONTACT FORM
     ===================================================== */
 
     setupContactForm() {
 
-        const form = document.getElementById("contactForm");
+        this.form = Utils.getElement("contactForm");
+        if (!this.form) return;
 
-        if (!form) return;
+        this.submitButton = this.getSubmitButton(this.form);
 
-        form.addEventListener("submit", (event) => {
+        this.form.addEventListener("submit", (event) => {
 
             event.preventDefault();
 
-            if (this.formSubmitted) {
-
+            if (this.formProcessing) {
                 ToastManager.show(
-                    "جاري معالجة طلبك، يرجى الانتظار...",
+                    CONFIG.translations[this.currentLanguage].processing,
                     "info"
                 );
-
                 return;
             }
 
-            // Validate browser form constraints.
-            if (!form.reportValidity()) return;
+            if (!this.form.reportValidity()) return;
 
             const data = this.collectFormData();
+            const t = CONFIG.translations[this.currentLanguage];
 
             if (!data.name) {
-
-                this.showValidationError(
-                    CONFIG.translations[this.currentLanguage].requiredName,
-                    "name"
-                );
-
+                this.showValidationError(t.requiredName, "name");
                 return;
             }
 
             if (!data.message) {
-
-                this.showValidationError(
-                    CONFIG.translations[this.currentLanguage].requiredMessage,
-                    "message"
-                );
-
+                this.showValidationError(t.requiredMessage, "message");
                 return;
             }
 
-            // Generate WhatsApp message.
-            const message = this.buildWhatsAppMessage(data);
+            try {
 
-            const whatsappUrl =
-                `https://wa.me/${CONFIG.whatsappNumber}` +
-                `?text=${encodeURIComponent(message)}`;
+                const message = this.buildWhatsAppMessage(data);
+                const whatsappUrl =
+                    `https://wa.me/${CONFIG.whatsappNumber}?text=${Utils.encode(message)}`;
 
-            // Open directly inside the user interaction.
-            const whatsappWindow = window.open(
-                whatsappUrl,
-                "_blank",
-                "noopener,noreferrer"
-            );
+                const whatsappLink = document.createElement("a");
+                whatsappLink.href = whatsappUrl;
+                whatsappLink.target = "_blank";
+                whatsappLink.rel = "noopener noreferrer";
+                whatsappLink.style.display = "none";
 
-            if (!whatsappWindow) {
+                document.body.appendChild(whatsappLink);
+                whatsappLink.click();
+                whatsappLink.remove();
+
+                this.formProcessing = true;
+                this.submitButton = this.getSubmitButton(this.form);
+                this.setSubmitButtonLoading(this.submitButton);
+
+                ToastManager.show(t.whatsappOpened, "success");
+
+                this.formTimeout = window.setTimeout(() => {
+                    this.formProcessing = false;
+                    this.resetSubmitButton(this.submitButton);
+                    this.formTimeout = null;
+                }, CONFIG.formResetDelay);
+
+            } catch (error) {
+
+                console.error("WhatsApp form error:", error);
+                this.formProcessing = false;
 
                 ToastManager.show(
-                    CONFIG.translations[this.currentLanguage].popupBlocked,
+                    CONFIG.translations[this.currentLanguage].generalError,
                     "error"
                 );
-
-                return;
+                this.resetSubmitButton(this.getSubmitButton(this.form));
             }
-
-            this.formSubmitted = true;
-
-            const submitButton = form.querySelector(
-                ".form-submit"
-            );
-
-            this.setSubmitButtonLoading(submitButton);
-
-            ToastManager.show(
-                CONFIG.translations[this.currentLanguage].whatsappOpened,
-                "success"
-            );
-
-            window.setTimeout(() => {
-
-                form.reset();
-
-                this.formSubmitted = false;
-
-                this.resetSubmitButton(submitButton);
-
-            }, 2500);
         });
     }
 
 
+    /* =====================================================
+       10.1 COLLECT FORM DATA
+    ===================================================== */
+
     collectFormData() {
 
         const getValue = (id) => {
-
-            const element = document.getElementById(id);
-
-            return element
-                ? element.value.trim()
-                : "";
+            const element = Utils.getElement(id);
+            return element ? Utils.normalizeText(element.value) : "";
         };
 
         return {
             name: getValue("name"),
-            email: getValue("email"),
             phone: getValue("phone"),
             city: getValue("city"),
             category: getValue("category"),
@@ -801,290 +1052,273 @@ class WebsiteManager {
     }
 
 
+    /* =====================================================
+       10.2 WHATSAPP MESSAGE BUILDER
+    ===================================================== */
+
     buildWhatsAppMessage(data) {
 
+        const t = CONFIG.translations[this.currentLanguage];
         const isArabic = this.currentLanguage === "ar";
 
-        if (isArabic) {
+        let city = data.city || t.notSpecified;
+        let category = data.category || t.notProvided;
 
-            return [
-                "مرحباً، أرغب في التواصل مع حراج أبو خالد.",
-                "",
-                "بيانات العميل:",
-                `الاسم: ${data.name}`,
-                `رقم الهاتف: ${data.phone || "غير محدد"}`,
-                `البريد الإلكتروني: ${data.email || "غير محدد"}`,
-                `المدينة: ${data.city || "غير محددة"}`,
-                `نوع الخدمة: ${data.category || "غير محدد"}`,
-                "",
-                "تفاصيل الطلب:",
-                data.message,
-                "",
-                "يرجى التواصل معي بخصوص الطلب. شكراً لكم."
-            ].join("\n");
+        if (!isArabic && data.city) {
+            city = CONFIG.cityTranslations[data.city] || data.city;
+        }
+
+        if (!isArabic && data.category) {
+            category = CONFIG.serviceTranslations[data.category] || data.category;
         }
 
         return [
-            "Hello, I would like to contact Abu Khalid.",
+            t.whatsappGreeting,
             "",
-            "Customer Information:",
-            `Name: ${data.name}`,
-            `Phone: ${data.phone || "Not provided"}`,
-            `Email: ${data.email || "Not provided"}`,
-            `City: ${data.city || "Not specified"}`,
-            `Service: ${data.category || "Not specified"}`,
+            t.customerInformation,
+            `${t.nameLabel} ${data.name}`,
+            `${t.phoneLabel} ${data.phone || t.notProvided}`,
+            `${t.cityLabel} ${city}`,
+            `${t.serviceLabel} ${category}`,
             "",
-            "Request Details:",
+            t.requestDetails,
             data.message,
             "",
-            "Please contact me regarding this request. Thank you."
+            t.whatsappClosing
         ].join("\n");
     }
 
+
+    /* =====================================================
+       10.3 SUBMIT BUTTON LOADING
+    ===================================================== */
 
     setSubmitButtonLoading(button) {
 
         if (!button) return;
 
-        const translations = CONFIG.translations[this.currentLanguage];
+        const t = CONFIG.translations[this.currentLanguage];
 
         button.disabled = true;
-
         button.setAttribute("aria-busy", "true");
 
-        const icon = button.querySelector("i");
-
-        button.textContent = "";
-
-        const loadingIcon = document.createElement("i");
-
-        loadingIcon.className = "fas fa-spinner fa-spin";
-
-        if (icon) {
-            button.appendChild(loadingIcon);
-        } else {
-            button.appendChild(loadingIcon);
+        if (button.tagName === "INPUT") {
+            button.value = t.loadingButton;
+            return;
         }
 
-        button.appendChild(
-            document.createTextNode(
-                ` ${translations.loadingButton}`
-            )
-        );
+        const loadingIcon = document.createElement("i");
+        loadingIcon.className = "fas fa-spinner fa-spin";
+        loadingIcon.setAttribute("aria-hidden", "true");
+
+        button.textContent = "";
+        button.appendChild(loadingIcon);
+        button.appendChild(document.createTextNode(` ${t.loadingButton}`));
     }
 
+
+    /* =====================================================
+       10.4 RESET SUBMIT BUTTON
+    ===================================================== */
 
     resetSubmitButton(button) {
 
         if (!button) return;
 
         button.disabled = false;
-
         button.removeAttribute("aria-busy");
 
-        const translations = CONFIG.translations[this.currentLanguage];
+        const t = CONFIG.translations[this.currentLanguage];
+
+        if (button.tagName === "INPUT") {
+            button.value = t.submitButton;
+            return;
+        }
 
         const icon = document.createElement("i");
-
         icon.className = "fab fa-whatsapp";
+        icon.setAttribute("aria-hidden", "true");
 
         button.textContent = "";
-
         button.appendChild(icon);
-
-        button.appendChild(
-            document.createTextNode(
-                ` ${translations.submitButton}`
-            )
-        );
+        button.appendChild(document.createTextNode(` ${t.submitButton}`));
     }
 
+
+    /* =====================================================
+       10.5 VALIDATION ERROR
+    ===================================================== */
 
     showValidationError(message, fieldId) {
 
         ToastManager.show(message, "error");
 
-        const field = document.getElementById(fieldId);
-
-        if (field) {
-            field.focus();
-        }
+        const field = Utils.getElement(fieldId);
+        if (field) field.focus();
     }
 
 
     /* =====================================================
-       10. SMOOTH SCROLLING
+       11. SMOOTH SCROLLING
     ===================================================== */
 
     setupSmoothScrolling() {
 
         document.addEventListener("click", (event) => {
 
-            const link = event.target.closest(
-                'a[href^="#"]'
-            );
+            const target = event.target;
+            if (!Utils.isElement(target)) return;
 
+            const link = target.closest('a[href^="#"]');
             if (!link) return;
 
-            const href = link.getAttribute("href");
+            if (
+                link.hasAttribute("data-bs-toggle") ||
+                link.hasAttribute("data-toggle")
+            ) {
+                return;
+            }
 
+            const href = link.getAttribute("href");
             if (!href || href === "#") return;
 
-            const targetId = href.substring(1);
+            let targetId;
+            try {
+                targetId = decodeURIComponent(href.substring(1));
+            } catch (error) {
+                targetId = href.substring(1);
+            }
 
-            const target = document.getElementById(targetId);
-
-            if (!target) return;
+            const section = Utils.getElement(targetId);
+            if (!section) return;
 
             event.preventDefault();
 
-            const header = document.getElementById("header");
+            const header = Utils.getElement("header");
 
-            const headerHeight = header
-                ? header.getBoundingClientRect().height
-                : 0;
+            const headerHeight = header ? header.getBoundingClientRect().height : 0;
 
             const position =
-                target.getBoundingClientRect().top +
+                section.getBoundingClientRect().top +
                 window.scrollY -
                 headerHeight -
                 12;
 
-            const reduceMotion = window.matchMedia(
-                "(prefers-reduced-motion: reduce)"
-            ).matches;
-
             window.scrollTo({
                 top: Math.max(0, position),
-                behavior: reduceMotion ? "auto" : "smooth"
+                behavior: Utils.prefersReducedMotion() ? "auto" : "smooth"
             });
 
             this.closeMobileMenu();
 
-            history.replaceState(null, "", href);
+            try {
+                window.history.replaceState(null, "", href);
+            } catch (error) {
+                console.warn("History update error:", error);
+            }
         });
     }
 
 
     /* =====================================================
-       11. SCROLL REVEAL
+       12. SCROLL REVEAL ANIMATIONS
     ===================================================== */
 
     setupScrollEffects() {
 
         const elements = document.querySelectorAll(
-            ".service-card, .about-card, .testimonial, .contact-card"
+            ".service-card, .about-card, .pricing-card, .step-card, .faq-card"
         );
 
-        if (!("IntersectionObserver" in window)) {
+        if (elements.length === 0) return;
 
-            elements.forEach((element) => {
-                element.classList.add("animate-in");
-            });
-
+        if (Utils.prefersReducedMotion()) {
+            elements.forEach((el) => el.classList.add("animate-in"));
             return;
         }
 
-        const observer = new IntersectionObserver(
-            (entries, currentObserver) => {
+        if (!("IntersectionObserver" in window)) {
+            elements.forEach((el) => el.classList.add("animate-in"));
+            return;
+        }
 
+        this.scrollObserver = new IntersectionObserver(
+
+            (entries, observer) => {
                 entries.forEach((entry) => {
-
                     if (!entry.isIntersecting) return;
 
                     entry.target.classList.add("animate-in");
-
-                    currentObserver.unobserve(entry.target);
+                    observer.unobserve(entry.target);
                 });
-
             },
+
             {
                 threshold: 0.1,
                 rootMargin: "0px 0px -50px 0px"
             }
         );
 
-        elements.forEach((element) => {
-            observer.observe(element);
-        });
+        elements.forEach((el) => this.scrollObserver.observe(el));
     }
 
 
     /* =====================================================
-       12. PROGRESS BAR
+       13. SCROLL PROGRESS BAR
     ===================================================== */
 
     setupProgressBar() {
         this.updateProgressBar();
     }
 
-
     updateProgressBar() {
 
-        const progressBar = document.getElementById(
-            "progressBar"
-        );
-
+        const progressBar = Utils.getElement("progressBar");
         if (!progressBar) return;
 
-        const scrollTop = Math.max(
-            0,
-            window.scrollY || document.documentElement.scrollTop
-        );
-
-        const documentHeight =
-            document.documentElement.scrollHeight;
-
+        const scrollTop = Math.max(0, window.scrollY || document.documentElement.scrollTop);
+        const documentHeight = document.documentElement.scrollHeight;
         const viewportHeight = window.innerHeight;
-
-        const scrollableHeight =
-            documentHeight - viewportHeight;
+        const scrollableHeight = documentHeight - viewportHeight;
 
         if (scrollableHeight <= 0) {
-
             progressBar.style.width = "0%";
-
+            progressBar.setAttribute("aria-valuenow", "0");
             return;
         }
 
         const percentage = Math.min(
             100,
-            Math.max(
-                0,
-                (scrollTop / scrollableHeight) * 100
-            )
+            Math.max(0, (scrollTop / scrollableHeight) * 100)
         );
 
         progressBar.style.width = `${percentage}%`;
+        progressBar.setAttribute("aria-valuenow", String(Math.round(percentage)));
     }
 
 
     /* =====================================================
-       13. HEADER SCROLL EFFECT
+       14. HEADER SCROLL EFFECT
     ===================================================== */
 
     updateHeaderOnScroll() {
 
-        const header = document.getElementById("header");
-
+        const header = Utils.getElement("header");
         if (!header) return;
 
-        header.classList.toggle(
-            "scrolled",
-            window.scrollY > CONFIG.scrollThreshold
-        );
+        header.classList.toggle("scrolled", window.scrollY > CONFIG.scrollThreshold);
     }
 
 
     /* =====================================================
-       14. EXTERNAL LINKS
+       15. EXTERNAL LINKS SECURITY
     ===================================================== */
 
     setupExternalLinks() {
 
-        document.querySelectorAll(
-            'a[target="_blank"]'
-        ).forEach((link) => {
+        const externalLinks = document.querySelectorAll('a[target="_blank"]');
+
+        externalLinks.forEach((link) => {
 
             const relValues = new Set(
                 (link.getAttribute("rel") || "").split(/\s+/).filter(Boolean)
@@ -1093,16 +1327,106 @@ class WebsiteManager {
             relValues.add("noopener");
             relValues.add("noreferrer");
 
-            link.setAttribute(
-                "rel",
-                Array.from(relValues).join(" ")
-            );
+            link.setAttribute("rel", Array.from(relValues).join(" "));
         });
     }
 
 
     /* =====================================================
-       15. RESIZE HANDLER
+       16. SEO LANGUAGE MANAGEMENT
+    ===================================================== */
+
+    setupSEO() {
+        this.updateSEO();
+    }
+
+    updateSEO() {
+
+        const isArabic = this.currentLanguage === "ar";
+
+        // ✅ إضافة "شراء وبيع"
+        const title = isArabic
+            ? "أبو خالد | شراء وبيع المكيفات والسكراب والألمنيوم والأثاث المستعمل جدة"
+            : "Abu Khalid | Buying and Selling Used AC, Scrap, Aluminum and Furniture in Jeddah";
+
+        const description = isArabic
+            ? "أبو خالد لشراء وبيع المكيفات المستعملة والخربانة وسكراب المكيفات والنحاس والألمنيوم والحديد والأجهزة الكهربائية والمطابخ والأثاث المستعمل ومعدات المطاعم في جدة ومكة ورابغ."
+            : "Abu Khalid buys and sells used and broken air conditioners, AC scrap, copper, aluminum, iron, electrical appliances, used kitchens, furniture and restaurant equipment in Jeddah, Makkah and Rabigh.";
+
+        document.title = title;
+
+        this.updateMetaContent('meta[name="description"]', description);
+        this.updateMetaContent('meta[property="og:title"]', title);
+        this.updateMetaContent('meta[property="og:description"]', description);
+        this.updateMetaContent('meta[property="og:locale"]', isArabic ? "ar_SA" : "en_US");
+        this.updateMetaContent('meta[name="twitter:title"]', title);
+        this.updateMetaContent('meta[name="twitter:description"]', description);
+
+        this.updateStructuredDataDescription(description);
+
+        document.documentElement.lang = this.currentLanguage;
+
+        const canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) {
+            canonical.href = isArabic
+                ? "https://abu-khalid.netlify.app/"
+                : "https://abu-khalid.netlify.app/?lang=en";
+        }
+    }
+
+    updateMetaContent(selector, content) {
+
+        const meta = document.querySelector(selector);
+        if (!meta) return;
+
+        meta.setAttribute("content", content);
+    }
+
+    updateStructuredDataDescription(description) {
+
+        const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+
+        scripts.forEach((script) => {
+            try {
+                const jsonData = JSON.parse(script.textContent);
+
+                const updateObject = (item) => {
+
+                    if (!item || typeof item !== "object") return;
+
+                    if (Array.isArray(item)) {
+                        item.forEach(updateObject);
+                        return;
+                    }
+
+                    const type = item["@type"];
+                    const types = Array.isArray(type) ? type : [type];
+
+                    const isBusiness = types.some((value) =>
+                        ["LocalBusiness", "Store", "HomeAndConstructionBusiness"].includes(value)
+                    );
+
+                    if (isBusiness && item.description) {
+                        item.description = description;
+                    }
+
+                    if (item["@graph"]) {
+                        updateObject(item["@graph"]);
+                    }
+                };
+
+                updateObject(jsonData);
+                script.textContent = JSON.stringify(jsonData, null, 2);
+
+            } catch (error) {
+                console.warn("Structured data update error:", error);
+            }
+        });
+    }
+
+
+    /* =====================================================
+       17. RESIZE HANDLER
     ===================================================== */
 
     handleResize() {
@@ -1112,12 +1436,13 @@ class WebsiteManager {
         }
 
         this.updateProgressBar();
+        this.updateHeaderOnScroll();
     }
 }
 
 
 /* =========================================================
-   16. ANIMATION EFFECTS
+   18. ANIMATION EFFECTS
 ========================================================= */
 
 class AnimationEffects {
@@ -1126,115 +1451,82 @@ class AnimationEffects {
         this.setupHoverEffects();
     }
 
-
     setupHoverEffects() {
 
-        // Disable hover transformations on touch devices.
-        if (!window.matchMedia("(hover: hover)").matches) {
-            return;
-        }
+        if (!window.matchMedia("(hover: hover)").matches) return;
 
-        const cards = document.querySelectorAll(
-            ".service-card"
-        );
+        const cards = document.querySelectorAll(".service-card");
 
         cards.forEach((card) => {
-
-            card.addEventListener("mouseenter", () => {
-                card.classList.add("is-hovered");
-            });
-
-            card.addEventListener("mouseleave", () => {
-                card.classList.remove("is-hovered");
-            });
+            card.addEventListener("mouseenter", () => card.classList.add("is-hovered"));
+            card.addEventListener("mouseleave", () => card.classList.remove("is-hovered"));
         });
 
-        const buttons = document.querySelectorAll(
-            ".btn, .service-btn, .quick-btn"
-        );
+        const buttons = document.querySelectorAll(".btn, .service-btn, .quick-btn");
 
         buttons.forEach((button) => {
-
-            button.addEventListener("mouseenter", () => {
-                button.classList.add("is-hovered");
-            });
-
-            button.addEventListener("mouseleave", () => {
-                button.classList.remove("is-hovered");
-            });
+            button.addEventListener("mouseenter", () => button.classList.add("is-hovered"));
+            button.addEventListener("mouseleave", () => button.classList.remove("is-hovered"));
         });
     }
 }
 
 
 /* =========================================================
-   17. DYNAMIC ANIMATION STYLES
+   19. DYNAMIC ANIMATION STYLES
 ========================================================= */
 
 function injectAnimationStyles() {
 
-    if (document.getElementById("websiteDynamicStyles")) {
-        return;
-    }
+    if (Utils.getElement("websiteDynamicStyles")) return;
 
     const style = document.createElement("style");
-
     style.id = "websiteDynamicStyles";
 
     style.textContent = `
+
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .animate-in {
-            animation: fadeInUp 0.6s ease forwards;
-        }
+        .animate-in { animation: fadeInUp 0.6s ease forwards; }
 
-        .fa-spin {
-            animation: fa-spin 1.5s infinite linear;
-        }
+        .fa-spin { animation: website-fa-spin 1.5s infinite linear; }
 
-        @keyframes fa-spin {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
+        @keyframes website-fa-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .service-card,
         .btn,
         .service-btn,
         .quick-btn {
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .service-card.is-hovered {
-            transform: translateY(-8px);
-        }
+        .service-card.is-hovered { transform: translateY(-8px); }
 
         .btn.is-hovered,
         .service-btn.is-hovered,
-        .quick-btn.is-hovered {
-            transform: translateY(-3px);
+        .quick-btn.is-hovered { transform: translateY(-3px); }
+
+        .form-submit:disabled,
+        .submit-button:disabled {
+            opacity: 0.7;
+            cursor: wait;
+            pointer-events: none;
+        }
+
+        .toast-removing {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
         }
 
         @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
+            *, *::before, *::after {
                 scroll-behavior: auto !important;
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
@@ -1248,32 +1540,33 @@ function injectAnimationStyles() {
 
 
 /* =========================================================
-   18. APPLICATION INITIALIZATION
+   20. APPLICATION INITIALIZATION
 ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
+let websiteManager = null;
+let animationEffects = null;
 
-    injectAnimationStyles();
+function initializeWebsite() {
+
+    if (websiteManager) return;
 
     try {
+        injectAnimationStyles();
 
-        window.websiteManager = new WebsiteManager();
+        websiteManager = new WebsiteManager();
+        window.websiteManager = websiteManager;
 
-        window.animationEffects = new AnimationEffects();
+        animationEffects = new AnimationEffects();
+        window.animationEffects = animationEffects;
 
         document.body.classList.add("loaded");
 
-        console.info(
-            "Abu Khalid Website initialized successfully."
-        );
+        console.info("Abu Khalid Website initialized successfully.");
 
     } catch (error) {
-
         document.body.classList.add("loaded");
-
-        console.error(
-            "Website initialization error:",
-            error
-        );
+        console.error("Website initialization error:", error);
     }
-});
+}
+
+Utils.ready(initializeWebsite);
